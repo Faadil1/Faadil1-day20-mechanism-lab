@@ -30,7 +30,7 @@ registry:
       note: random recall ordering removed
     RUNTIME_COMMIT_BINDING_GATE:
       status: BLOCKED
-      note: no hosted runtime yet
+      note: Cloudflare preview content is verified, but exact deployment-to-commit binding is not independently proven
     PRODUCT_DEPTH_LIVE_REALITY:
       status: N_A
       note: pre-concept proof lab; activates after concept lock and material build
@@ -44,8 +44,8 @@ registry:
       status: BLOCKED
       note: public title intentionally deferred
     DEPLOYMENT_GATE:
-      status: BLOCKED
-      note: hosted preview is required for external blind testing; Vercel connector deploy action returned TOOL_NOT_FOUND on 2026-10-02
+      status: PROVEN
+      note: Cloudflare Pages preview verified at https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/
     JUDGE_STORY_DEMO_QA:
       status: N_A
       note: activates only if project becomes judged build
