@@ -1,0 +1,38 @@
+project:
+  id: DAY20_MECHANISM_LAB
+  repository: Faadil1/Faadil1-day20-mechanism-lab
+  branch: preconcept/comparative-mechanism-proof
+  date: 2026-10-02
+  source_of_truth: GITHUB
+  project_type: INTERACTIVE_WEB_EXPERIMENT
+  stage: PRE_CONCEPT
+  lifecycle: QUALIFY_DECIDE
+  current_gate: COMPARATIVE_MECHANISM_PROOF
+  concept_lock: BLOCKED
+  naming_lock: BLOCKED
+
+research:
+  origin: video_prompt_about_what_was_lost_from_2000s_internet
+  original_hypothesis: path_agency_serendipity_loss
+  original_hypothesis_status: SUPERSEDED_AS_TOO_BROAD
+  working_law: BEHAVIOR_IS_EVIDENCE_NOT_INTENTION
+  working_question: WHAT_HAPPENS_WHEN_A_SYSTEM_LEARNS_WHAT_YOU_DO_FASTER_THAN_YOU_CAN_TELL_IT_WHAT_YOU_MEAN
+  negative_event: OBSERVED_BEHAVIOR_CAN_OPTIMIZE_IMMEDIATE_ENGAGEMENT_WHILE_DIVERGING_FROM_REFLECTIVELY_ENDORSED_PREFERENCE
+
+surviving_probes:
+  A_RETROSPECTIVE_MISMATCH: ACTIVE
+  B_WHO_MOVED_THE_WORLD: ACTIVE
+  C_UNRETRACEABLE_CAUSE: ACTIVE
+
+truth_boundary:
+  observed_action: OBSERVED
+  deterministic_model_update: OBSERVED
+  resulting_environment_change: OBSERVED
+  inferred_preference: INFERRED
+  true_user_intention_from_behavior: UNKNOWN
+  third_party_platform_algorithm_claims: NOT_IMPLEMENTED
+
+next:
+  action: RUN_BLIND_COMPARATIVE_TESTS
+  promotion_requirement: MULTIPLE_PARTICIPANTS_IDENTIFY_CAUSAL_AMBIGUITY_WITHOUT_COACHING
+  after_pass: CONCEPT_LOCK_CANDIDATE_REVIEW
