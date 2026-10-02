@@ -42,4 +42,11 @@ preflight:
   receipt: research/INTERNAL-PREFLIGHT.md
   commit_under_test: 10c2596fa508c77763605d78c18b3a3d01af7fbc
   external_user_evidence: NOT_YET_OBSERVED
-  hosted_runtime: BLOCKED_VERCEL_CONNECTOR_DEPLOY_ACTION_UNAVAILABLE
+  hosted_runtime: CLOUDFLARE_PAGES_PREVIEW_PENDING
+
+cloudflare_pages:
+  project: faadil1-day20-mechanism-lab
+  production_branch: main
+  preview_branch: preconcept/comparative-mechanism-proof
+  production_root_expected: NO_APP_ON_MAIN
+  preview_deployment: PENDING
