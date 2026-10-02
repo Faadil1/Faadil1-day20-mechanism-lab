@@ -44,8 +44,8 @@ registry:
       status: BLOCKED
       note: public title intentionally deferred
     DEPLOYMENT_GATE:
-      status: N_A
-      note: no deployment required for current local proof
+      status: ACTIVE
+      note: hosted preview is now required to collect external blind-test evidence
     JUDGE_STORY_DEMO_QA:
       status: N_A
       note: activates only if project becomes judged build
