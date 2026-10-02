@@ -17,6 +17,8 @@ handover:
   exact_next_gate:
     id: COMPARATIVE_MECHANISM_PROOF
     protocol: BLIND-TEST-SCRIPT.md
+    preflight_receipt: research/INTERNAL-PREFLIGHT.md
+    hosted_preview_required: true
     candidates:
       - A_RETROSPECTIVE_MISMATCH
       - B_WHO_MOVED_THE_WORLD
