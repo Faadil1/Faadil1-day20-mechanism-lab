@@ -1,0 +1,24 @@
+lifecycle_coverage:
+  project: DAY20_MECHANISM_LAB
+  macro:
+    QUALIFY: ACTIVE
+    DECIDE: ACTIVE
+    DESIGN: BLOCKED
+    DELIVER: BLOCKED
+    AUDIT: BLOCKED
+    EXPAND: BLOCKED
+
+  judged_build:
+    RUBRIC: N_A
+    PAIN: ACTIVE
+    PROBLEM: ACTIVE
+    NEGATIVE_EVENT: PROVEN
+    DIFFERENTIATOR: ACTIVE
+    EXECUTION: BLOCKED
+    LIVE_DEPTH: BLOCKED
+    EVIDENCE: ACTIVE
+    STORY: BLOCKED
+    DEMO: BLOCKED
+    QA: BLOCKED
+
+  note: This is currently a Day Challenge research lab rather than a locked product or hackathon submission. No later stage may be silently implied.
