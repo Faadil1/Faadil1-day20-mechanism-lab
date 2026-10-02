@@ -42,11 +42,18 @@ preflight:
   receipt: research/INTERNAL-PREFLIGHT.md
   commit_under_test: 10c2596fa508c77763605d78c18b3a3d01af7fbc
   external_user_evidence: NOT_YET_OBSERVED
-  hosted_runtime: CLOUDFLARE_PAGES_PREVIEW_PENDING
+  hosted_runtime: LIVE_PREVIEW_VERIFIED
 
 cloudflare_pages:
   project: faadil1-day20-mechanism-lab
   production_branch: main
   preview_branch: preconcept/comparative-mechanism-proof
+  preview_url: https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/
+  content_verification: VERIFIED
+  blind_routes:
+    - https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=a
+    - https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=b
+    - https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=c
+  exact_commit_binding: BLOCKED_NO_CLOUDFLARE_SHA_RECEIPT
   production_root_expected: NO_APP_ON_MAIN
-  preview_deployment: PENDING
+  preview_deployment: VERIFIED
