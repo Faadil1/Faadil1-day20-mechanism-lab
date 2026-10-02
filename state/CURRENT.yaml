@@ -33,6 +33,13 @@ truth_boundary:
   third_party_platform_algorithm_claims: NOT_IMPLEMENTED
 
 next:
-  action: RUN_BLIND_COMPARATIVE_TESTS
+  action: HOST_BRANCH_PREVIEW_THEN_RUN_BLIND_COMPARATIVE_TESTS
   promotion_requirement: MULTIPLE_PARTICIPANTS_IDENTIFY_CAUSAL_AMBIGUITY_WITHOUT_COACHING
   after_pass: CONCEPT_LOCK_CANDIDATE_REVIEW
+
+preflight:
+  status: PROVEN
+  receipt: research/INTERNAL-PREFLIGHT.md
+  commit_under_test: 10c2596fa508c77763605d78c18b3a3d01af7fbc
+  external_user_evidence: NOT_YET_OBSERVED
+  hosted_runtime: BLOCKED
