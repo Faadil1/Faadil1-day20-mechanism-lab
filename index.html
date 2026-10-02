@@ -18,8 +18,8 @@ p{line-height:1.5;color:var(--muted)}.tabs{display:flex;gap:8px;flex-wrap:wrap;m
 </style>
 </head>
 <body><main>
-<section class="top"><div class="k">Day 20 / pre-concept / deterministic mechanism proof</div><h1>Behavior is evidence.<br>It is not intention.</h1><p>Three probes. Same corpus. Same truth boundary. No proprietary algorithm is simulated. All model rules are local and inspectable.</p></section>
-<div class="tabs">
+<section class="top" id="topIntro"><div class="k" id="topKicker">Day 20 / pre-concept / deterministic mechanism proof</div><h1 id="topTitle">Behavior is evidence.<br>It is not intention.</h1><p id="topSub">Three probes. Same corpus. Same truth boundary. No proprietary algorithm is simulated. All model rules are local and inspectable.</p></section>
+<div class="tabs" id="tabs">
 <button class="on" data-p="a">A — Retrospective mismatch</button><button data-p="b">B — Who moved the world?</button><button data-p="c">C — Unretraceable cause</button><button data-p="log">Evidence log</button>
 </div>
 
@@ -28,12 +28,12 @@ p{line-height:1.5;color:var(--muted)}.tabs{display:flex;gap:8px;flex-wrap:wrap;m
 </section>
 
 <section id="b" class="panel">
-<div class="card"><div class="k">Probe B</div><div class="big">Who moved the world?</div><p>Each visit is observed. A deterministic similarity rule moves nearby material. Meaning remains UNKNOWN.</p><button class="btn primary" id="startB">Enter the map</button></div>
+<div class="card"><div class="k">Probe B</div><div class="big" id="bTitle">Who moved the world?</div><p id="bIntro">Each visit is observed. A deterministic similarity rule moves nearby material. Meaning remains UNKNOWN.</p><button class="btn primary" id="startB">Enter the map</button></div>
 <div id="bRun" class="hidden"><div class="net"><svg id="map" viewBox="0 0 900 460"></svg></div><div class="row" style="margin-top:10px"><button class="btn" id="findD">GO BACK TO D</button><button class="btn" id="revealB">REVEAL WHAT MOVED</button></div><div id="bMsg" class="small"></div></div><div id="bReveal"></div>
 </section>
 
 <section id="c" class="panel">
-<div class="card"><div class="k">Probe C</div><div class="big">Can you retrace the cause?</div><p>See a short sequence. Then retrieve one item and explain why it appeared there.</p><button class="btn primary" id="startC">Start sequence</button></div><div id="cRun"></div><div id="cReveal"></div>
+<div class="card"><div class="k">Probe C</div><div class="big" id="cTitle">Can you retrace the cause?</div><p id="cIntro">See a short sequence. Then retrieve one item and explain why it appeared there.</p><button class="btn primary" id="startC">Start sequence</button></div><div id="cRun"></div><div id="cReveal"></div>
 </section>
 
 <section id="log" class="panel"><div class="card"><div class="k">Inspectability</div><div class="big">Evidence log</div><p>Observed events and model updates only. Intention is never promoted from inference to fact.</p><button class="btn" id="reset">Reset local session</button></div><pre id="trace" class="trace"></pre></section>
@@ -41,14 +41,14 @@ p{line-height:1.5;color:var(--muted)}.tabs{display:flex;gap:8px;flex-wrap:wrap;m
 
 <script>
 var corpus=[
-{id:"A",title:"Signal Garden",topic:"systems",depth:.86,novelty:.45,light:.25},
-{id:"B",title:"Broken Compass",topic:"navigation",depth:.54,novelty:.82,light:.48},
-{id:"C",title:"Soft Machines",topic:"design",depth:.38,novelty:.55,light:.83},
-{id:"D",title:"Deep Time",topic:"history",depth:.97,novelty:.62,light:.18},
-{id:"E",title:"Small Rituals",topic:"culture",depth:.43,novelty:.44,light:.91},
-{id:"F",title:"Strange Attractors",topic:"science",depth:.73,novelty:.96,light:.34},
-{id:"G",title:"Repair Manual",topic:"practice",depth:.78,novelty:.36,light:.32},
-{id:"H",title:"Drift",topic:"media",depth:.41,novelty:.88,light:.67}
+{id:"A",title:"Signal Garden",topic:"systems",depth:.86,novelty:.45,light:.25,text:"A tiny ecosystem where simple rules produce outcomes nobody selected directly."},
+{id:"B",title:"Broken Compass",topic:"navigation",depth:.54,novelty:.82,light:.48,text:"A map can tell you exactly where you are while remaining silent about why you arrived."},
+{id:"C",title:"Soft Machines",topic:"design",depth:.38,novelty:.55,light:.83,text:"Some interfaces reveal themselves slowly instead of demanding an immediate response."},
+{id:"D",title:"Deep Time",topic:"history",depth:.97,novelty:.62,light:.18,text:"A long view of systems that change faster than people can develop language for them."},
+{id:"E",title:"Small Rituals",topic:"culture",depth:.43,novelty:.44,light:.91,text:"Tiny repeated acts can become meaningful before anyone formalizes what they mean."},
+{id:"F",title:"Strange Attractors",topic:"science",depth:.73,novelty:.96,light:.34,text:"Patterns can look random until you stop assuming the system is moving in straight lines."},
+{id:"G",title:"Repair Manual",topic:"practice",depth:.78,novelty:.36,light:.32,text:"Repair exposes assumptions that polished objects usually hide from the person using them."},
+{id:"H",title:"Drift",topic:"media",depth:.41,novelty:.88,light:.67,text:"Sometimes you notice the destination before you notice that you stopped choosing the turns."}
 ];
 var targets={learn:{depth:.82,novelty:.45,light:.28},surprise:{depth:.52,novelty:.92,light:.48},relax:{depth:.30,novelty:.40,light:.92},deep:{depth:.98,novelty:.50,light:.18}};
 var labels={learn:"LEARN SOMETHING",surprise:"BE SURPRISED",relax:"RELAX",deep:"GO DEEP"};
@@ -60,24 +60,39 @@ document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function
 var intents=document.getElementById("intents");Object.keys(labels).forEach(function(k){var b=document.createElement("button");b.className="btn";b.textContent=labels[k];b.onclick=function(){startA(k)};intents.appendChild(b)});
 function score(x,w){return x.depth*w.depth+x.novelty*w.novelty+x.light*w.light}
 function startA(intent){S.a={intent:intent,i:0,weights:{depth:.5,novelty:.5,light:.5},seen:[]};ev("a_intent",{intent:intent});runA()}
-function runA(){var a=S.a;if(a.i>=6){revealA();return}var left=corpus.filter(function(x){return a.seen.indexOf(x.id)<0}).sort(function(x,y){return score(y,a.weights)-score(x,a.weights)});var item=left[0];var box=document.getElementById("aRun");box.innerHTML='<div class="card"><div class="k">ITEM '+(a.i+1)+' / 6 · ranked locally</div><div class="title">'+item.id+' — '+item.title+'</div><p>'+item.topic+'</p><div class="row"><button class="btn primary" data-act="open">OPEN</button><button class="btn" data-act="save">SAVE</button><button class="btn" data-act="skip">SKIP</button></div></div>';box.querySelectorAll("[data-act]").forEach(function(b){b.onclick=function(){actA(item,b.dataset.act)}})}
+function runA(){var a=S.a;if(a.i>=6){revealA();return}var left=corpus.filter(function(x){return a.seen.indexOf(x.id)<0}).sort(function(x,y){return score(y,a.weights)-score(x,a.weights)});var item=left[0];var box=document.getElementById("aRun");box.innerHTML='<div class="card"><div class="k">ITEM '+(a.i+1)+' / 6 · ranked locally</div><div class="title">'+item.id+' — '+item.title+'</div><p>'+item.text+'</p><div class="small">'+item.topic+'</div><div class="row"><button class="btn primary" data-act="open">OPEN</button><button class="btn" data-act="save">SAVE</button><button class="btn" data-act="skip">SKIP</button></div></div>';box.querySelectorAll("[data-act]").forEach(function(b){b.onclick=function(){actA(item,b.dataset.act)}})}
 function actA(item,act){var a=S.a;a.seen.push(item.id);a.i++;var d=act==="save"?.14:act==="open"?.08:-.05;["depth","novelty","light"].forEach(function(k){a.weights[k]=Math.max(.05,Math.min(.95,a.weights[k]+d*(item[k]-.5)*2))});ev("a_behavior",{item:item.id,action:act,model_after:a.weights,true_intention:"UNKNOWN"});runA()}
 function pct(x){return Math.round(x*100)}
 function bar(name,x){return '<strong>'+name+' '+pct(x)+'</strong><div class="bar"><div class="fill" style="width:'+pct(x)+'%"></div></div>'}
-function revealA(){var a=S.a,t=targets[a.intent],w=a.weights;ev("a_reveal",{stated:a.intent,model:w,note:"inference is not ground-truth intention"});document.getElementById("aRun").innerHTML="";document.getElementById("aReveal").innerHTML='<div class="card"><div class="k">Retrospective reveal</div><div class="title">YOU SAID: '+labels[a.intent]+'</div><div class="call"><strong>The model never learned what you meant.</strong><br><span class="small">It updated only from observable behavior.</span></div><h3>STATED</h3>'+bar("depth",t.depth)+bar("novelty",t.novelty)+bar("lightness",t.light)+'<h3>MODEL</h3>'+bar("depth",w.depth)+bar("novelty",w.novelty)+bar("lightness",w.light)+'<div class="big">Which one should have been in charge?</div></div>'}
+function revealA(){var a=S.a,t=targets[a.intent],w=a.weights;ev("a_reveal",{stated:a.intent,model:w,note:"inference is not ground-truth intention"});document.getElementById("aRun").innerHTML="";document.getElementById("aReveal").innerHTML='<div class="card"><div class="k">Session trace</div><div class="title">STATED SESSION GOAL: '+labels[a.intent]+'</div><h3>STATED</h3>'+bar("depth",t.depth)+bar("novelty",t.novelty)+bar("lightness",t.light)+'<h3>MODEL STATE FROM ACTIONS</h3>'+bar("depth",w.depth)+bar("novelty",w.novelty)+bar("lightness",w.light)+'<div class="call"><strong>INTENTION</strong><br>Not inferred as ground truth.</div><div class="big">Which signal should guide the next item?</div></div>'}
 
 var base={A:[120,230],B:[320,90],C:[330,360],D:[580,80],E:[560,220],F:[620,360],G:[800,170],H:[790,350]};
 var edges=[["A","B"],["A","C"],["B","D"],["B","E"],["C","E"],["C","F"],["D","G"],["E","G"],["E","H"],["F","H"]];
 document.getElementById("startB").onclick=function(){S.b={visits:{},pos:JSON.parse(JSON.stringify(base)),initial:JSON.parse(JSON.stringify(base)),moves:[]};document.getElementById("bRun").classList.remove("hidden");ev("b_start");draw()};
 function draw(){var svg=document.getElementById("map");svg.innerHTML="";edges.forEach(function(e){var p=S.b.pos[e[0]],q=S.b.pos[e[1]],l=document.createElementNS("http://www.w3.org/2000/svg","line");l.setAttribute("x1",p[0]);l.setAttribute("y1",p[1]);l.setAttribute("x2",q[0]);l.setAttribute("y2",q[1]);l.setAttribute("class","edge");svg.appendChild(l)});corpus.forEach(function(item){var p=S.b.pos[item.id],g=document.createElementNS("http://www.w3.org/2000/svg","g");g.setAttribute("class","node "+(S.b.visits[item.id]?"seen":""));g.setAttribute("transform","translate("+p[0]+","+p[1]+")");var c=document.createElementNS("http://www.w3.org/2000/svg","circle");c.setAttribute("r","27");var t=document.createElementNS("http://www.w3.org/2000/svg","text");t.textContent=item.id;g.appendChild(c);g.appendChild(t);g.onclick=function(){visit(item)};svg.appendChild(g)})}
-function visit(item){S.b.visits[item.id]=(S.b.visits[item.id]||0)+1;var a=S.b.pos[item.id];corpus.forEach(function(o){if(o.id===item.id)return;var sim=1-Math.abs(o.depth-item.depth)*.34-Math.abs(o.novelty-item.novelty)*.33-Math.abs(o.light-item.light)*.33;if(sim>.72){var p=S.b.pos[o.id],old=[p[0],p[1]];p[0]+=(a[0]-p[0])*.07;p[1]+=(a[1]-p[1])*.07;S.b.moves.push({because:item.id,moved:o.id,from:old,to:[p[0],p[1]],rule:"similarity>.72 -> move 7% toward visited node"})}});ev("b_visit",{item:item.id,true_intention:"UNKNOWN",changes:S.b.moves.slice(-4)});draw();document.getElementById("bMsg").textContent="Observed: visited "+item.id+". Meaning: UNKNOWN. Terrain may have moved."}
+function visit(item){S.b.visits[item.id]=(S.b.visits[item.id]||0)+1;var a=S.b.pos[item.id];corpus.forEach(function(o){if(o.id===item.id)return;var sim=1-Math.abs(o.depth-item.depth)*.34-Math.abs(o.novelty-item.novelty)*.33-Math.abs(o.light-item.light)*.33;if(sim>.72){var p=S.b.pos[o.id],old=[p[0],p[1]];p[0]+=(a[0]-p[0])*.07;p[1]+=(a[1]-p[1])*.07;S.b.moves.push({because:item.id,moved:o.id,from:old,to:[p[0],p[1]],rule:"similarity>.72 -> move 7% toward visited node"})}});ev("b_visit",{item:item.id,true_intention:"UNKNOWN",changes:S.b.moves.slice(-4)});draw();document.getElementById("bMsg").textContent=item.id+" — "+item.title+": "+item.text}
 document.getElementById("findD").onclick=function(){var p=S.b.pos.D,q=S.b.initial.D,d=Math.hypot(p[0]-q[0],p[1]-q[1]);ev("b_retrace",{target:"D",distance_moved:+d.toFixed(1)});document.getElementById("bMsg").textContent="D moved "+d.toFixed(1)+" px from its initial coordinate."};
-document.getElementById("revealB").onclick=function(){ev("b_reveal",{moves:S.b.moves.length});document.getElementById("bReveal").innerHTML='<div class="card"><div class="k">Reveal</div><div class="title">Observed behavior moved it. Meaning stayed unknown.</div><pre class="trace">'+JSON.stringify(S.b.moves.slice(-10),null,2)+'</pre></div>'};
+document.getElementById("revealB").onclick=function(){ev("b_reveal",{moves:S.b.moves.length});document.getElementById("bReveal").innerHTML='<div class="card"><div class="k">Session trace</div><div class="title">OBSERVED: '+Object.keys(S.b.visits).length+' visited nodes · MODEL ACTIONS: '+S.b.moves.length+' coordinate changes</div><div class="call"><strong>INTENTION</strong><br>NOT RECORDED</div><pre class="trace">'+JSON.stringify(S.b.moves.slice(-10),null,2)+'</pre></div>'};
 
 document.getElementById("startC").onclick=function(){S.c={i:0,sequence:[],third:null,bias:0};ev("c_start");nextC()};
-function nextC(){var c=S.c;if(c.i>=6){recallC();return}var left=corpus.filter(function(x){return c.sequence.indexOf(x.id)<0}).sort(function(a,b){return (b.novelty+c.bias*b.depth)-(a.novelty+c.bias*a.depth)});var item=left[0];c.sequence.push(item.id);c.i++;if(c.i===3)c.third=item.id;ev("c_exposure",{position:c.i,item:item.id,bias:c.bias});document.getElementById("cRun").innerHTML='<div class="card"><div class="k">SEQUENCE '+c.i+' / 6</div><div class="title">'+item.id+' — '+item.title+'</div><div class="row"><button id="cont" class="btn primary">CONTINUE</button><button id="linger" class="btn">LINGER</button></div></div>';document.getElementById("cont").onclick=function(){c.bias=Math.max(-.2,c.bias-.02);ev("c_behavior",{item:item.id,action:"continue",effect:-.02});nextC()};document.getElementById("linger").onclick=function(){c.bias=Math.min(.4,c.bias+.08);ev("c_behavior",{item:item.id,action:"linger",effect:.08,true_intention:"UNKNOWN"});nextC()}}
+function nextC(){var c=S.c;if(c.i>=6){recallC();return}var left=corpus.filter(function(x){return c.sequence.indexOf(x.id)<0}).sort(function(a,b){return (b.novelty+c.bias*b.depth)-(a.novelty+c.bias*a.depth)});var item=left[0];c.sequence.push(item.id);c.i++;if(c.i===3)c.third=item.id;ev("c_exposure",{position:c.i,item:item.id,bias:c.bias});document.getElementById("cRun").innerHTML='<div class="card"><div class="k">SEQUENCE '+c.i+' / 6</div><div class="title">'+item.id+' — '+item.title+'</div><p>'+item.text+'</p><div class="row"><button id="cont" class="btn primary">CONTINUE</button><button id="linger" class="btn">LINGER</button></div></div>';document.getElementById("cont").onclick=function(){c.bias=Math.max(-.6,c.bias-.15);ev("c_behavior",{item:item.id,action:"continue",effect:-.15});nextC()};document.getElementById("linger").onclick=function(){c.bias=Math.min(.9,c.bias+.30);ev("c_behavior",{item:item.id,action:"linger",effect:.30,true_intention:"UNKNOWN"});nextC()}}
 function recallC(){var c=S.c;document.getElementById("cRun").innerHTML='<div class="card"><div class="big">Go back to the third thing you saw.</div><div class="row" id="picks"></div></div>';var picks=corpus.slice(0,6);if(!picks.some(function(x){return x.id===c.third}))picks[0]=corpus.find(function(x){return x.id===c.third});var shift=corpus.findIndex(function(x){return x.id===c.third})%picks.length;picks=picks.slice(shift).concat(picks.slice(0,shift));var wrap=document.getElementById("picks");picks.forEach(function(x){var b=document.createElement("button");b.className="btn";b.textContent=x.id+" — "+x.title;b.onclick=function(){causeC(x.id)};wrap.appendChild(b)})}
 function causeC(id){var ok=id===S.c.third;ev("c_recall",{picked:id,target:S.c.third,correct:ok});document.getElementById("cRun").innerHTML='<div class="card"><div class="k">'+(ok?"RETRIEVED":"MISSED")+'</div><div class="big">Why did it appear third?</div><div class="row" id="causes"></div></div>';["novelty","my previous action","fixed order","I cannot tell"].forEach(function(x){var b=document.createElement("button");b.className="btn";b.textContent=x;b.onclick=function(){revealC(x)};document.getElementById("causes").appendChild(b)})}
-function revealC(answer){ev("c_causal_guess",{answer:answer});var prior=S.log.filter(function(x){return x.type==="c_behavior"}).slice(0,2);document.getElementById("cReveal").innerHTML='<div class="card"><div class="k">Causal trace</div><div class="title">Content memory is not causal memory.</div><pre class="trace">'+JSON.stringify({third_item:S.c.third,prior_observed_actions:prior,rule:"novelty + actionBias * depth",true_user_intention:"UNKNOWN"},null,2)+'</pre></div>'}
-document.getElementById("reset").onclick=function(){localStorage.removeItem("day20");location.reload()};save();
+function revealC(answer){ev("c_causal_guess",{answer:answer});var prior=S.log.filter(function(x){return x.type==="c_behavior"}).slice(0,2);document.getElementById("cReveal").innerHTML='<div class="card"><div class="k">Session trace</div><div class="title">THIRD ITEM: '+S.c.third+'</div><div class="call"><strong>INTENTION</strong><br>NOT RECORDED</div><pre class="trace">'+JSON.stringify({third_item:S.c.third,prior_observed_actions:prior,rule:"novelty + actionBias * depth",true_user_intention:"UNKNOWN"},null,2)+'</pre></div>'}
+document.getElementById("reset").onclick=function(){localStorage.removeItem("day20");location.reload()};
+function applyBlindMode(){
+  var q=new URLSearchParams(location.search),blind=q.get("blind")==="1",probe=q.get("probe");
+  if(!blind)return;
+  document.getElementById("topKicker").textContent="DAY 20 / INTERACTION STUDY";
+  document.getElementById("topTitle").textContent="Explore this short system.";
+  document.getElementById("topSub").textContent="Use it however feels natural. There is no correct way to interact.";
+  if(probe==="b"){document.getElementById("bTitle").textContent="Explore the map.";document.getElementById("bIntro").textContent="Select anything that draws your attention."}
+  if(probe==="c"){document.getElementById("cTitle").textContent="View a short sequence.";document.getElementById("cIntro").textContent="Use the two available actions however they make sense to you."}
+  if(["a","b","c"].indexOf(probe)>=0){
+    document.getElementById("tabs").classList.add("hidden");
+    document.querySelectorAll(".panel").forEach(function(x){x.classList.remove("on")});
+    document.getElementById(probe).classList.add("on");
+  }
+}
+applyBlindMode();save();
 </script></body></html>
