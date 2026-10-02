@@ -44,8 +44,8 @@ registry:
       status: BLOCKED
       note: public title intentionally deferred
     DEPLOYMENT_GATE:
-      status: ACTIVE
-      note: hosted preview is now required to collect external blind-test evidence
+      status: BLOCKED
+      note: hosted preview is required for external blind testing; Vercel connector deploy action returned TOOL_NOT_FOUND on 2026-10-02
     JUDGE_STORY_DEMO_QA:
       status: N_A
       note: activates only if project becomes judged build
