@@ -42,4 +42,4 @@ preflight:
   receipt: research/INTERNAL-PREFLIGHT.md
   commit_under_test: 10c2596fa508c77763605d78c18b3a3d01af7fbc
   external_user_evidence: NOT_YET_OBSERVED
-  hosted_runtime: BLOCKED
+  hosted_runtime: BLOCKED_VERCEL_CONNECTOR_DEPLOY_ACTION_UNAVAILABLE
