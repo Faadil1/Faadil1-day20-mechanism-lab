@@ -2,14 +2,44 @@ project:
   id: DAY20_MECHANISM_LAB
   repository: Faadil1/Faadil1-day20-mechanism-lab
   branch: preconcept/comparative-mechanism-proof
-  date: 2026-10-02
+  date: 2026-10-03
   source_of_truth: GITHUB
-  project_type: INTERACTIVE_WEB_EXPERIMENT
+  project_type: RESEARCH_INTERACTIVE_WEB_EXPERIMENT
+  project_profile: PRODUCT-REALITY-POLICY.yaml#research_or_prototype
+  project_status: ACTIVE
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
-  current_gate: COMPARATIVE_MECHANISM_PROOF
+  current_owner: pbpd
+  exact_next_gate: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
+  exact_next_action: >-
+    Run blind external tests with one probe per participant and no thesis briefing; begin with balanced
+    coverage across A/B/C, continue while results are contradictory or insufficient, and record raw
+    causal-comprehension/truth-boundary responses before any explanation.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
+  terminal_completeness_allowed: false
+
+system_reconciliation:
+  status: PROVEN
+  applied_at: 2026-10-03
+  receipt: governance/SYSTEM-RECONCILIATION-2026-10-03.md
+  central_source: Faadil1/faadil-agent-system@main
+  central_version_observed: 0.1.48-system-control-plane-v1-active
+  historical_backdating: false
+  prior_history_rewritten: false
+
+authorization:
+  status: AUTHORIZED_BOUNDED_PRECONCEPT_VALIDATION
+  owner: HUMAN
+  pointer: governance/PROJECT-AUTHORIZATION.yaml
+  production_reconciliation_owner: pbpd
+
+living_PRD:
+  status: SATISFIED
+  pointer: PRD-0.1.md
+  created_at: 2026-10-03
+  first_canonical_PRD: true
+  prior_work_semantics: RECONSTRUCTED_FROM_CANONICAL_EVIDENCE_WHERE_SUPPORTED
 
 research:
   origin: video_prompt_about_what_was_lost_from_2000s_internet
@@ -18,11 +48,22 @@ research:
   working_law: BEHAVIOR_IS_EVIDENCE_NOT_INTENTION
   working_question: WHAT_HAPPENS_WHEN_A_SYSTEM_LEARNS_WHAT_YOU_DO_FASTER_THAN_YOU_CAN_TELL_IT_WHAT_YOU_MEAN
   negative_event: OBSERVED_BEHAVIOR_CAN_OPTIMIZE_IMMEDIATE_ENGAGEMENT_WHILE_DIVERGING_FROM_REFLECTIVELY_ENDORSED_PREFERENCE
+  multi_llm_review_status: PROVEN_AS_RESEARCH_INPUT_NOT_AUTHORITY
+  synthesis_pointer: research/MULTI-LLM-SYNTHESIS.md
 
 surviving_probes:
   A_RETROSPECTIVE_MISMATCH: ACTIVE
   B_WHO_MOVED_THE_WORLD: ACTIVE
   C_UNRETRACEABLE_CAUSE: ACTIVE
+
+last_proven:
+  experience_gate: INTERNAL_MECHANISM_PREFLIGHT
+  experience_receipt: research/INTERNAL-PREFLIGHT.md
+  runtime_gate: DEPLOYMENT_GATE_PREVIEW_CONTENT_VERIFIED
+  runtime_receipt: evidence/RUNTIME-PREVIEW-VERIFICATION-2026-10-02.md
+  engineering_quality_gate: BOUNDED_BACKFILL_PASS_WITH_ACCEPTED_DEBT
+  engineering_quality_receipt: governance/ENGINEERING-QUALITY-RECEIPT.json
+  system_gate: SYSTEM_RECONCILIATION_2026_10_03
 
 truth_boundary:
   observed_action: OBSERVED
@@ -31,18 +72,52 @@ truth_boundary:
   inferred_preference: INFERRED
   true_user_intention_from_behavior: UNKNOWN
   third_party_platform_algorithm_claims: NOT_IMPLEMENTED
+  external_user_comprehension: NOT_YET_OBSERVED
+  final_mechanism_superiority: NOT_PROVEN
 
-next:
-  action: HOST_BRANCH_PREVIEW_THEN_RUN_BLIND_COMPARATIVE_TESTS
-  promotion_requirement: MULTIPLE_PARTICIPANTS_IDENTIFY_CAUSAL_AMBIGUITY_WITHOUT_COACHING
-  after_pass: CONCEPT_LOCK_CANDIDATE_REVIEW
+product_reality:
+  applicability: ACTIVE
+  packet: governance/PRODUCT-REALITY-PACKET.yaml
+  status: ACTIVE_PARTIAL
+  live_core_loop: SATISFIED_FOR_RESEARCH_PROTOTYPE
+  real_consequence: SATISFIED_FOR_PROTOTYPE
+  external_user_evidence: MISSING
+  time_to_first_value: UNKNOWN
+  AI_advantage: NOT_APPLICABLE_WITH_REASON_CORE_VALUE_REQUIRES_INSPECTABLE_DETERMINISTIC_CAUSALITY
+  product_exploitation_loop: ACTIVE_BOUNDED_PRECONCEPT
+  post_vertical_slice_depth_gap_review: SATISFIED_BY_2026_10_03_RECONCILIATION
 
-preflight:
-  status: PROVEN
-  receipt: research/INTERNAL-PREFLIGHT.md
-  commit_under_test: 10c2596fa508c77763605d78c18b3a3d01af7fbc
-  external_user_evidence: NOT_YET_OBSERVED
-  hosted_runtime: LIVE_PREVIEW_VERIFIED
+evidence_graph:
+  applicability: ACTIVE_REQUIRED_BY_LIVE_PREVIEW_CLAIM
+  pointer: governance/EVIDENCE-GRAPH.yaml
+  status: PARTIAL
+  runtime_commit_binding: BLOCKED
+  external_user_claim: MISSING
+
+reference_intelligence:
+  status: ACTIVE_PROJECT_LOCAL
+  pointer: research/REFERENCE-INTELLIGENCE.yaml
+  central_promotion: NOT_REQUESTED
+  trigger_domains:
+    - recommender_systems
+    - human_computer_interaction
+    - causal_legibility
+    - hypertext_and_navigation
+
+engineering_quality:
+  status: PROVEN_BOUNDED_BACKFILL
+  receipt: governance/ENGINEERING-QUALITY-RECEIPT.json
+  verdict: PASS_WITH_ACCEPTED_DEBT
+  accepted_debt:
+    - no_automated_browser_E2E_or_accessibility_suite_at_preconcept_stage
+
+rule_lifecycle:
+  decision: NO_CHANGE
+  reason: no_new_global_rule_earned_from_single_active_project
+
+cross_project_learning:
+  decision: NO_CHANGE
+  reason: project_not_postmortem_and_no_multi_project_generalization_evidence
 
 cloudflare_pages:
   project: faadil1-day20-mechanism-lab
@@ -55,5 +130,10 @@ cloudflare_pages:
     - https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=b
     - https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=c
   exact_commit_binding: BLOCKED_NO_CLOUDFLARE_SHA_RECEIPT
-  production_root_expected: NO_APP_ON_MAIN
-  preview_deployment: VERIFIED
+  deployment_state: PREVIEW
+
+blockers:
+  - EXTERNAL_USER_EVIDENCE_NOT_YET_OBSERVED
+  - RUNTIME_COMMIT_BINDING_NOT_PROVEN
+  - CONCEPT_LOCK_REQUIRES_COMPARATIVE_MECHANISM_EVIDENCE
+  - SURVIVING_MECHANISM_REQUIRES_RENEWED_COLLISION_CHECK_BEFORE_LOCK
