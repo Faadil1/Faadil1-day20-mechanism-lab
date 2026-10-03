@@ -1,0 +1,46 @@
+schema_version: 1.0.0
+project: DAY20_MECHANISM_LAB
+gate: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
+
+participant:
+  id: PXX
+  probe: A|B|C
+  tested_at: YYYY-MM-DD
+  thesis_briefed_before_use: false
+  completion: COMPLETE|PARTIAL|ABANDONED
+
+raw_answers:
+  q1_what_happened: ""
+  q2_what_system_knew: ""
+  q3_what_system_inferred: ""
+  q4_what_changed: ""
+  q5_surprising_useful_uncomfortable_unclear: ""
+  q6_one_sentence_description: ""
+  q7_what_experiment_was_trying_to_show: ""
+
+scoring:
+  causal_comprehension: 0|1|2
+  truth_boundary_comprehension: 0|1|2
+  felt_consequence: 0|1|2
+  explanation_dependence: 0|1|2
+
+participant_words_indicate:
+  behavior_to_inference_to_consequence: true|false|partial
+  intention_was_not_known: true|false|partial
+  generic_algorithm_bad_framing_only: true|false
+  memorable_consequence: true|false|partial
+
+product_observations:
+  confusion_or_defect: []
+  abandonment_reason: null
+  route_or_control_failure: []
+  unexpected_interpretation: []
+
+interviewer_notes:
+  interpretation: ""
+  coaching_given_before_q7: false
+  coaching_details: null
+
+truth_state:
+  result_class: EXTERNAL_USER_OBSERVED
+  mechanism_promotion_signal: POSITIVE|MIXED|NEGATIVE|UNKNOWN
