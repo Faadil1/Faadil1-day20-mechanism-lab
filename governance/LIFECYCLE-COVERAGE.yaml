@@ -1,24 +1,188 @@
-lifecycle_coverage:
-  project: DAY20_MECHANISM_LAB
-  macro:
-    QUALIFY: ACTIVE
-    DECIDE: ACTIVE
-    DESIGN: BLOCKED
-    DELIVER: BLOCKED
-    AUDIT: BLOCKED
-    EXPAND: BLOCKED
+version: 0.1.1
+project: DAY20_MECHANISM_LAB
+project_type: RESEARCH
+repository: Faadil1/Faadil1-day20-mechanism-lab
+source_of_truth: Faadil1/Faadil1-day20-mechanism-lab@preconcept/comparative-mechanism-proof
+current_owner: pbpd
+current_stage: PRE_CONCEPT_COMPARATIVE_MECHANISM_PROOF
+exact_next_gate: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
+exact_next_action: >-
+  Run one blind probe per participant without thesis coaching; record raw interpretations and continue
+  balanced A/B/C coverage until mechanism comprehension converges or a contradiction requires repair.
+last_updated: 2026-10-03
 
-  judged_build:
-    RUBRIC: N_A
-    PAIN: ACTIVE
-    PROBLEM: ACTIVE
-    NEGATIVE_EVENT: PROVEN
-    DIFFERENTIATOR: ACTIVE
-    EXECUTION: BLOCKED
-    LIVE_DEPTH: BLOCKED
-    EVIDENCE: ACTIVE
-    STORY: BLOCKED
-    DEMO: BLOCKED
-    QA: BLOCKED
+bootstrap:
+  faadil_system_router_activated: true
+  project_profile_resolved: true
+  lifecycle_manifest_created_at_first_material_build_touch: false
+  reconciliation_at_next_material_touch: true
+  chat_memory_used_as_only_gate_source: false
+  reconstruction_note: >-
+    Full canonical lifecycle coverage was first created on 2026-10-03 after the code-bearing proof lab already existed.
+    Earlier supportable work is explicitly marked RECONSTRUCTED_FROM_CANONICAL_EVIDENCE.
 
-  note: This is currently a Day Challenge research lab rather than a locked product or hackathon submission. No later stage may be silently implied.
+capabilities:
+  - capability: faadil_system_router
+    owner: faadil-agent-system
+    status: SATISFIED
+    evidence_pointer: governance/SYSTEM-RECONCILIATION-2026-10-03.md
+
+  - capability: opportunity_or_domain_intelligence
+    owner: pbpd
+    status: RECONSTRUCTED_FROM_CANONICAL_EVIDENCE
+    evidence_pointer: research/MULTI-LLM-SYNTHESIS.md
+    reconstruction_note: non_hackathon_domain_research_performed_before_formal_control_plane_reconciliation
+
+  - capability: authorization_owner
+    owner: human
+    status: SATISFIED
+    evidence_pointer: governance/PROJECT-AUTHORIZATION.yaml
+
+  - capability: problem_worthiness_or_problem_reality
+    owner: pbpd
+    status: RECONSTRUCTED_FROM_CANONICAL_EVIDENCE
+    evidence_pointer: governance/EVIDENCE-LEDGER.md
+    reconstruction_note: source_verified_problem_signals_exist; project_specific_external_user_signal_is_still_missing
+
+  - capability: negative_event_gate
+    owner: pbpd
+    status: SATISFIED
+    evidence_pointer: governance/PRODUCT-REALITY-PACKET.yaml
+
+  - capability: product_reality_and_production_evidence
+    owner: pbpd
+    status: SATISFIED
+    evidence_pointer: governance/PRODUCT-REALITY-PACKET.yaml
+
+  - capability: prototype_killer_or_simpler_alternative_challenge
+    owner: pbpd
+    status: RECONSTRUCTED_FROM_CANONICAL_EVIDENCE
+    evidence_pointer: research/MULTI-LLM-SYNTHESIS.md
+    reconstruction_note: static_explainer_nostalgia_feed_control_and_serendipity_only_alternatives_were_explicitly_killed
+
+  - capability: living_PRD
+    owner: pbpd
+    status: SATISFIED
+    evidence_pointer: PRD-0.1.md
+    reconstruction_note: first_canonical_PRD_created_2026_10_03_no_backdating
+
+  - capability: spec_kit_or_equivalent
+    owner: pbpd
+    status: NOT_APPLICABLE_WITH_REASON
+    not_applicable_reason: >-
+      Current preconcept lab is one static file with three bounded mechanisms; specification orchestration would add
+      more process than execution value. Reevaluate if Concept Lock materially expands architecture.
+
+  - capability: production_owner
+    owner: pbpd
+    status: SATISFIED
+    evidence_pointer: governance/PROJECT-AUTHORIZATION.yaml
+
+  - capability: evidence_and_evaluation
+    owner: pbpd
+    status: SATISFIED
+    evidence_pointer:
+      - governance/EVIDENCE-GRAPH.yaml
+      - BLIND-TEST-SCRIPT.md
+    reconstruction_note: evaluation capability exists; external participant results remain MISSING evidence within it
+
+  - capability: engineering_quality_assurance
+    owner: pbpd
+    status: SATISFIED
+    evidence_pointer: governance/ENGINEERING-QUALITY-RECEIPT.json
+
+  - capability: design_experience_assurance
+    owner: trace
+    status: NOT_APPLICABLE_WITH_REASON
+    not_applicable_reason: >-
+      Current surface is intentionally minimal for blind mechanism validity and no design-quality promotion claim is being made.
+      Activate TRACE after a mechanism survives and visual interaction becomes material.
+
+  - capability: winner_intelligence
+    owner: hackathon_opportunity_intelligence
+    status: NOT_APPLICABLE_WITH_REASON
+    not_applicable_reason: Day_20_is_not_currently_a_hackathon_or_formal_judged_build
+
+  - capability: competitive_collision
+    owner: pbpd
+    status: RECONSTRUCTED_FROM_CANONICAL_EVIDENCE
+    evidence_pointer:
+      - research/MULTI-LLM-SYNTHESIS.md
+      - research/REFERENCE-INTELLIGENCE.yaml
+    reconstruction_note: prior_collision_checks_exist; surviving_mechanism_requires_fresh_check_before_Concept_Lock
+
+  - capability: post_build_reconciliation
+    owner: pbpd
+    status: NOT_APPLICABLE_WITH_REASON
+    not_applicable_reason: current_project_is_preconcept_and_not_at_build_candidate_or_terminal_boundary
+
+  - capability: terminal_assurance
+    owner: project_finisher
+    status: NOT_APPLICABLE_WITH_REASON
+    not_applicable_reason: no_BUILD_CANDIDATE_READY_release_or_submission_transition_requested
+
+  - capability: protected_human_action
+    owner: human
+    status: SATISFIED
+    evidence_pointer: governance/PROJECT-AUTHORIZATION.yaml
+    reconstruction_note: human_retains_merge_release_publication_and_final_lock_authority
+
+  - capability: post_mortem_and_learning
+    owner: pbpd
+    status: NOT_APPLICABLE_WITH_REASON
+    not_applicable_reason: project_is_ACTIVE_not_terminal
+
+product_depth_and_live_reality:
+  applicable: true
+  live_core_loop: SATISFIED
+  load_bearing_integration: NOT_APPLICABLE_WITH_REASON_NO_SPONSOR_OR_EXTERNAL_PRODUCT_INTEGRATION
+  real_consequence: SATISFIED
+  representative_scenario_depth: MISSING
+  failure_and_recovery: MISSING
+  real_user_surface: SATISFIED
+  external_user_or_operator_evidence: MISSING
+  organic_usage_boundary: NOT_APPLICABLE_WITH_REASON_CONTROLLED_RESEARCH
+  time_to_first_value: UNKNOWN
+  operational_economics: NOT_APPLICABLE_WITH_REASON_NO_PAID_CORE_LOOP
+  shared_product_core: SATISFIED_SINGLE_SURFACE
+  reality_ledger: SATISFIED
+  post_vertical_slice_depth_gap_review: SATISFIED
+  observability_and_receipts: PARTIAL
+  judge_or_operator_self_serve: SATISFIED_FOR_PREVIEW
+  setup_and_reproducibility: SATISFIED_STATIC_NO_BUILD
+  clean_room_core_path: SATISFIED
+  external_dependency_failure_behavior: NOT_APPLICABLE_WITH_REASON_NO_EXTERNAL_CORE_DEPENDENCY
+  production_like_behavior: NOT_APPLICABLE_WITH_REASON_RESEARCH_PROTOTYPE
+  evidence_pointer: governance/PRODUCT-REALITY-PACKET.yaml
+  unresolved_gaps:
+    - representative_scenario_depth
+    - failure_and_recovery
+    - external_user_evidence
+    - time_to_first_value
+    - runtime_commit_binding
+    - server_side_observability
+
+competitive_judge_cycle:
+  applicable: false
+  not_applicable_reason: no_formal_judged_build_context_currently_applies
+
+missing:
+  - external_user_or_operator_evidence
+  - representative_scenario_depth
+  - failure_and_recovery
+  - runtime_commit_binding
+
+triggered_but_unresolved:
+  - COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
+  - RUNTIME_COMMIT_BINDING_GATE
+  - COMPETITIVE_COLLISION_RECHECK_BEFORE_CONCEPT_LOCK
+
+human_overrides: []
+
+reconstructed_artifacts:
+  - opportunity_or_domain_intelligence
+  - problem_worthiness_or_problem_reality
+  - prototype_killer_or_simpler_alternative_challenge
+  - competitive_collision
+
+terminal_completeness_allowed: false
