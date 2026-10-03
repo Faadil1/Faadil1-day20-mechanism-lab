@@ -12,9 +12,9 @@ project:
   current_owner: pbpd
   exact_next_gate: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
   exact_next_action: >-
-    Run blind external tests with one probe per participant and no thesis briefing; begin with balanced
-    coverage across A/B/C, continue while results are contradictory or insufficient, and record raw
-    causal-comprehension/truth-boundary responses before any explanation.
+    Execute research/ROUND-1-TEST-PACKET.md: seed P01-P06 with balanced A/B/C assignment, one blind probe
+    per participant, no thesis briefing, capture Q1-Q7 verbatim using research/blind-test-results/RESULT-TEMPLATE.yaml,
+    and continue beyond P06 only while evidence is contradictory or insufficient.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -137,3 +137,11 @@ blockers:
   - RUNTIME_COMMIT_BINDING_NOT_PROVEN
   - CONCEPT_LOCK_REQUIRES_COMPARATIVE_MECHANISM_EVIDENCE
   - SURVIVING_MECHANISM_REQUIRES_RENEWED_COLLISION_CHECK_BEFORE_LOCK
+
+round_1_external_blind_test:
+  status: READY_TO_RUN
+  packet: research/ROUND-1-TEST-PACKET.md
+  result_template: research/blind-test-results/RESULT-TEMPLATE.yaml
+  seed_assignment: [P01_A, P02_B, P03_C, P04_A, P05_B, P06_C]
+  fixed_sample_size_rule: false
+  first_result_status: PENDING
