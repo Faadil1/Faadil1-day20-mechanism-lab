@@ -1,51 +1,158 @@
 registry:
   project: DAY20_MECHANISM_LAB
-  date: 2026-10-02
-  states: [ACTIVE, PROVEN, BLOCKED, N_A]
+  date: 2026-10-03
+  policy_basis:
+    - SYSTEM-CONTROL-PLANE-POLICY.yaml
+    - PRODUCT-REALITY-POLICY.yaml@1.3.0
+    - PROJECT-LIFECYCLE-COMPLETENESS-POLICY.yaml
+    - EVIDENCE-GRAPH-POLICY.yaml
+  states: [PROVEN, ACTIVE, BLOCKED, PENDING, N_A, UNKNOWN]
 
   gates:
-    PRE_BUILD_REALITY_GATE:
-      status: ACTIVE
-      note: preserve real sourced negative event and counter-case before concept lock
+    SYSTEM_ROUTER_RECONCILIATION:
+      status: PROVEN
+      note: reconciled_against_Faadil1/faadil-agent-system_main_on_2026_10_03
+      evidence: governance/SYSTEM-RECONCILIATION-2026-10-03.md
+
+    PROJECT_STATUS_CLASSIFICATION:
+      status: PROVEN
+      note: ACTIVE_PRE_CONCEPT_RESEARCH_PROTOTYPE
+
+    HUMAN_PROJECT_AUTHORIZATION:
+      status: PROVEN
+      note: bounded_preconcept_validation_authorized
+      evidence: governance/PROJECT-AUTHORIZATION.yaml
+
+    PROBLEM_SUBJECT_RESEARCH:
+      status: PROVEN
+      note: multi_llm_plus_primary_source_checks_completed_as_research_input
+      evidence: research/MULTI-LLM-SYNTHESIS.md
+
     MULTI_LLM_RESEARCH_GATE:
       status: PROVEN
-      note: Gemini Grok Claude Perplexity Kimi plus DeepSeek bonus synthesized by GPT
+      note: GPT_central_synthesis_with_Gemini_Grok_Claude_Kimi_Perplexity_and_DeepSeek_bonus
+
+    PRE_BUILD_REALITY_GATE:
+      status: PROVEN
+      note: source_verifiable_negative_event_and_countercases_preserved
+      evidence:
+        - governance/EVIDENCE-LEDGER.md
+        - research/REFERENCE-INTELLIGENCE.yaml
+
+    PROTOTYPE_KILLER_SIMPLER_ALTERNATIVE:
+      status: PROVEN
+      note: static_explainer_feed_steering_dashboard_nostalgia_and_serendipity_only_directions_killed
+      evidence:
+        - README.md
+        - research/MULTI-LLM-SYNTHESIS.md
+
     COMPETITIVE_NOVELTY_KILL_GATE:
       status: ACTIVE
-      note: collisions already killed museum old-web revival trails-only feed-control and nostalgia directions
-    TECHNICAL_REALITY_CHECK:
+      note: prior_collision_research_exists_but_surviving_mechanism_requires_fresh_collision_check_before_Concept_Lock
+
+    LIVING_PRD:
+      status: PROVEN
+      note: first_canonical_PRD_created_2026_10_03_without_backdating
+      evidence: PRD-0.1.md
+
+    PRODUCT_REALITY:
       status: ACTIVE
-      note: deterministic local inference and observable state changes exist in mechanism lab
+      note: activated_at_this_material_touch_per_v1_3
+      evidence: governance/PRODUCT-REALITY-PACKET.yaml
+
+    PRODUCT_DEPTH_LIVE_REALITY:
+      status: ACTIVE
+      note: live_research_vertical_slice_exists; depth_gaps_remain_visible
+      evidence: governance/PRODUCT-REALITY-PACKET.yaml
+
+    PRODUCT_EXPLOITATION_LOOP:
+      status: ACTIVE
+      note: bounded_to_external_user_learning_causal_depth_failure_recovery_binding_and_observability_before_feature_expansion
+
+    TECHNICAL_REALITY_CHECK:
+      status: PROVEN
+      note: deterministic_local_inference_and_real_state_changes_revalidated
+      evidence:
+        - research/INTERNAL-PREFLIGHT.md
+        - governance/ENGINEERING-QUALITY-RECEIPT.json
+
     TRUTH_BOUNDARY_GATE:
       status: PROVEN
-      note: OBSERVED vs INFERRED vs UNKNOWN explicitly separated
+      note: OBSERVED_INFERRED_UNKNOWN_explicitly_separated
+
     NEGATIVE_PATH_GATE:
-      status: ACTIVE
-      note: UNKNOWN is required when behavior cannot establish intention
+      status: PROVEN
+      note: UNKNOWN_is_preserved_when_behavior_cannot_establish_intention
+
     EVIDENCE_INTEGRITY_GATE:
       status: ACTIVE
-      note: current evidence class LOCAL_VERIFIED only
+      note: preview_local_external_user_and_commit_binding_classes_are_not_conflated
+
+    EVIDENCE_GRAPH_GATE:
+      status: ACTIVE
+      note: graph_created_but_live_preview_claim_is_PARTIAL_due_missing_commit_binding
+      evidence: governance/EVIDENCE-GRAPH.yaml
+
+    ENGINEERING_QUALITY_ASSURANCE:
+      status: PROVEN
+      note: bounded_active_project_backfill_pass_with_accepted_debt
+      evidence: governance/ENGINEERING-QUALITY-RECEIPT.json
+
     DETERMINISTIC_DEMO_GATE:
-      status: ACTIVE
-      note: random recall ordering removed
-    RUNTIME_COMMIT_BINDING_GATE:
-      status: BLOCKED
-      note: Cloudflare preview content is verified, but exact deployment-to-commit binding is not independently proven
-    PRODUCT_DEPTH_LIVE_REALITY:
-      status: N_A
-      note: pre-concept proof lab; activates after concept lock and material build
-    EXTERNAL_USER_EVIDENCE:
-      status: ACTIVE
-      note: blind tests are the next gate
-    CONCEPT_LOCK:
-      status: BLOCKED
-      note: comparative mechanism evidence required
-    NAMING_LOCK:
-      status: BLOCKED
-      note: public title intentionally deferred
+      status: PROVEN
+      note: random_recall_order_removed_and_Probe_C_causal_branch_revalidated
+
     DEPLOYMENT_GATE:
       status: PROVEN
-      note: Cloudflare Pages preview verified at https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/
+      note: Cloudflare_Pages_preview_content_verified
+      evidence: evidence/RUNTIME-PREVIEW-VERIFICATION-2026-10-02.md
+
+    RUNTIME_COMMIT_BINDING_GATE:
+      status: BLOCKED
+      note: exact_Cloudflare_deployment_to_Git_commit_binding_not_independently_proven
+
+    EXTERNAL_USER_EVIDENCE:
+      status: PENDING
+      note: exact_next_gate
+      evidence: BLIND-TEST-SCRIPT.md
+
+    REFERENCE_INTELLIGENCE:
+      status: ACTIVE
+      note: bounded_project_local_packet_only_no_central_promotion
+      evidence: research/REFERENCE-INTELLIGENCE.yaml
+
+    SPEC_KIT_OR_EQUIVALENT:
+      status: N_A
+      note: single_file_preconcept_mechanism_lab_does_not_currently_need_spec_driven_execution; reevaluate_if_concept_locks_and_scope_expands
+
+    TRACE_DESIGN_ASSURANCE:
+      status: PENDING
+      note: intentionally_deferred_until_a_mechanism_survives_blind_testing_and_experience_design_becomes_material
+
+    PRE_LAUNCH_SHIP_ASSURANCE:
+      status: N_A
+      note: project_is_not_release_or_submission_candidate
+
+    PROJECT_FINISHER_TERMINAL_ASSURANCE:
+      status: N_A
+      note: no_terminal_transition_is_being_requested
+
+    CONCEPT_LOCK:
+      status: BLOCKED
+      note: comparative_external_mechanism_evidence_missing
+
+    NAMING_LOCK:
+      status: BLOCKED
+      note: public_title_deferred_until_after_Concept_Lock
+
     JUDGE_STORY_DEMO_QA:
       status: N_A
-      note: activates only if project becomes judged build
+      note: no_formal_judged_build_context_currently_applies
+
+    RULE_LIFECYCLE_CHANGE:
+      status: N_A
+      note: reconciliation_decision_is_NO_CHANGE
+
+    CROSS_PROJECT_LEARNING_PROMOTION:
+      status: N_A
+      note: no_postmortem_or_multi_project_generalization_evidence
