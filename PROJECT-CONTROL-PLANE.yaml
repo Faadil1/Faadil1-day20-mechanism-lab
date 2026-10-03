@@ -1,0 +1,56 @@
+version: 1.0.0
+policy: SYSTEM-CONTROL-PLANE-POLICY.yaml
+
+project:
+  name: DAY20_MECHANISM_LAB
+  repository: Faadil1/Faadil1-day20-mechanism-lab
+  project_type: RESEARCH
+  profile: PRODUCT-REALITY-POLICY.yaml#project_type_projection.research_or_prototype
+  status: ACTIVE
+
+routing:
+  current_owner: pbpd
+  exact_next_gate: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
+  ambiguity:
+    - final_public_concept_not_locked
+    - final_product_name_not_locked
+  protected_authority_boundary: human_retains_merge_release_publication_and_final_concept_authority
+
+activation:
+  lifecycle_manifest: governance/LIFECYCLE-COVERAGE.yaml
+  conditional_gateway_registry: governance/GATEWAY-REGISTRY.yaml
+  product_reality: ACTIVE
+  evidence_graph: ACTIVE
+  reference_intelligence_domains:
+    - recommender_systems
+    - human_computer_interaction
+    - causal_legibility
+    - hypertext_and_navigation
+  engineering_quality_assurance: PROVEN_BOUNDED_BACKFILL
+  pre_launch_ship_assurance: N/A_PRECONCEPT_NOT_RELEASE
+
+state:
+  current_pointer: state/CURRENT.yaml
+  handover_pointer: state/HANDOVER.yaml
+  initialized_or_updated: true
+  reconciliation_date: 2026-10-03
+  no_backdating: true
+
+truth_boundary:
+  observed:
+    - deterministic_probe_logic_exists
+    - Cloudflare_preview_content_was_verified
+    - probe_actions_change_local_model_or_environment_state
+  inferred:
+    - participant_meaning_from_behavior
+    - comparative_mechanism_superiority_before_external_test
+  unknown:
+    - external_participant_comprehension
+    - exact_Cloudflare_deployment_to_commit_binding
+    - final_concept
+    - final_name
+
+blockers:
+  - EXTERNAL_USER_EVIDENCE_NOT_YET_OBSERVED
+  - RUNTIME_COMMIT_BINDING_NOT_PROVEN
+  - CONCEPT_LOCK_BLOCKED_BY_COMPARATIVE_MECHANISM_PROOF
