@@ -34,15 +34,15 @@ handover:
   exact_next_gate:
     id: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
     owner: pbpd
-    protocol: BLIND-TEST-SCRIPT.md
+    protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
       - A_RETROSPECTIVE_MISMATCH
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Give one blind probe to each participant without thesis briefing. Start with balanced coverage across
-      all three probes, then continue only while evidence remains contradictory or insufficient. Record the
-      participant's own explanation before revealing the thesis.
+      Execute research/ROUND-1-TEST-PACKET.md. Seed P01-P06 across A/B/C, one blind probe each, capture Q1-Q7
+      verbatim using research/blind-test-results/RESULT-TEMPLATE.yaml, and continue beyond P06 only while
+      evidence remains contradictory or insufficient.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
