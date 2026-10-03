@@ -1,9 +1,21 @@
 handover:
-  date: 2026-10-02
+  date: 2026-10-03
   repository: Faadil1/Faadil1-day20-mechanism-lab
   branch: preconcept/comparative-mechanism-proof
-  resume_rule: READ_state_CURRENT_FIRST
-  status: PRE_CONCEPT_COMPARATIVE_MECHANISM_PROOF_ACTIVE
+  status: ACTIVE_PRE_CONCEPT_RECONCILED
+  current_owner: pbpd
+
+  resume_rule: >-
+    Read state/CURRENT.yaml first, then PRD-0.1.md, PROJECT-CONTROL-PLANE.yaml,
+    governance/PRODUCT-REALITY-PACKET.yaml, governance/GATEWAY-REGISTRY.yaml,
+    governance/LIFECYCLE-COVERAGE.yaml and governance/EVIDENCE-GRAPH.yaml.
+    Canonical GitHub state outranks chat memory.
+
+  reconciliation:
+    receipt: governance/SYSTEM-RECONCILIATION-2026-10-03.md
+    applied_at: 2026-10-03
+    history_backdated: false
+    central_source: Faadil1/faadil-agent-system@main
 
   preserve:
     - BEHAVIOR_IS_EVIDENCE_NOT_INTENTION
@@ -13,15 +25,46 @@ handover:
     - NO_ALGORITHM_VILLAIN_CONCLUSION
     - NO_CONCEPT_LOCK_BEFORE_COMPARATIVE_EVIDENCE
     - DETERMINISTIC_DEMO_BEHAVIOR
+    - PRODUCT_VALUE_AND_REAL_ACTION_OUTRANK_PROOF_ARTIFACTS
+    - LIVE_PRODUCT_MODE_PRIMARY_REPLAY_SECONDARY
+    - EVIDENCE_GRAPH_MISSING_EDGES_REMAIN_VISIBLE
+    - NO_GLOBAL_RULE_FROM_SINGLE_PROJECT
+    - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: COMPARATIVE_MECHANISM_PROOF
+    id: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
+    owner: pbpd
     protocol: BLIND-TEST-SCRIPT.md
-    preflight_receipt: research/INTERNAL-PREFLIGHT.md
-    hosted_preview_required: true
     candidates:
       - A_RETROSPECTIVE_MISMATCH
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
-    kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_THE_CAUSAL_AMBIGUITY
-    promotion_condition: STRANGER_CAN_DESCRIBE_BEHAVIOR_TO_INFERENCE_TO_CONSEQUENCE_AND_RECOGNIZE_INTENTION_AS_UNKNOWN
+    action: >-
+      Give one blind probe to each participant without thesis briefing. Start with balanced coverage across
+      all three probes, then continue only while evidence remains contradictory or insufficient. Record the
+      participant's own explanation before revealing the thesis.
+    kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
+    promotion_condition: >-
+      Multiple independent participants identify behavior_to_inference_to_consequence and understand that
+      actual intention was not known.
+
+  after_gate:
+    - update governance/EVIDENCE-GRAPH.yaml with external runtime/user receipts
+    - update governance/PRODUCT-REALITY-PACKET.yaml
+    - compare A/B/C without aesthetic scoring
+    - rerun competitive_collision_check_on_surviving_mechanism
+    - run TRACE only after mechanism survival makes experience design material
+    - consider Concept Lock only if evidence and collision gates allow
+
+  unresolved:
+    - exact_Cloudflare_runtime_to_commit_binding
+    - external_user_evidence
+    - time_to_first_value
+    - final_concept
+    - final_name
+
+  prohibited_next_actions_without_new_authority:
+    - merge_Draft_PR_1
+    - production_release
+    - public_final_brand_lock
+    - terminal_completion_claim
