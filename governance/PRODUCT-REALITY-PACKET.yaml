@@ -1,0 +1,94 @@
+version: 1.0.0
+project: DAY20_MECHANISM_LAB
+date: 2026-10-03
+policy: PRODUCT-REALITY-POLICY.yaml@1.3.0
+status: ACTIVE_PARTIAL
+owner: pbpd
+adoption: ADOPTED_AT_2026_10_03_MATERIAL_TOUCH
+historical_backdating: false
+
+problem_statement: >-
+  Observable behavior can be interpreted as preference and used to change a user's next information environment
+  even when the behavior does not establish the user's actual intention.
+
+pain_evidence:
+  status: SOURCE_VERIFIABLE_PLUS_QUALITATIVE_RESEARCH
+  external_user_evidence_for_this_project: MISSING
+  pointer:
+    - research/MULTI-LLM-SYNTHESIS.md
+    - governance/EVIDENCE-LEDGER.md
+    - research/REFERENCE-INTELLIGENCE.yaml
+
+frequency_or_recurrence_assessment: UNKNOWN_FOR_TARGET_POPULATION
+economic_or_operational_consequence: NOT_APPLICABLE_WITH_REASON_RESEARCH_EXPERIMENT
+real_workflow_map:
+  - participant_stated_goal_or_enters_probe
+  - participant_action
+  - local_deterministic_interpretation
+  - model_or_environment_state_change
+  - next_encounter
+  - retrospective_trace
+  - blind_interview
+tacit_knowledge_or_explicit_none_known: NONE_KNOWN
+baseline_or_current_alternative:
+  - static_explainer
+  - generic_feed_simulator
+  - algorithm_control_dashboard
+  - nostalgia_old_web_comparison
+AI_advantage_hypothesis: NOT_APPLICABLE_WITH_REASON__CORE_VALUE_REQUIRES_INSPECTABLE_DETERMINISTIC_CAUSALITY_NOT_AI
+primary_outcome_metric: BLIND_CAUSAL_COMPREHENSION_WITH_TRUTH_BOUNDARY
+human_boundary: >-
+  Participant intention is never promoted from behavior to fact. Human self-report is the only direct statement
+  of participant intention available to this experiment.
+production_gap:
+  - external_user_evidence_missing
+  - exact_runtime_commit_binding_missing
+  - failure_recovery_depth_partial
+  - time_to_first_value_unmeasured
+  - no_server_side_telemetry
+
+live_core_loop_status: SATISFIED_FOR_RESEARCH_PROTOTYPE
+live_core_loop_evidence:
+  - Cloudflare_preview_user_surface
+  - deterministic_local_state_change
+  - local_session_trace
+product_depth_packet:
+  load_bearing_integration_status: NOT_APPLICABLE_WITH_REASON_NO_SPONSOR_OR_EXTERNAL_CORE_INTEGRATION
+  real_consequence_status: SATISFIED_FOR_PROTOTYPE
+  representative_scenario_matrix: PARTIAL
+  failure_recovery_path: PARTIAL_RESET_AVAILABLE_NO_FULL_FAILURE_MATRIX
+  real_user_surface: SATISFIED
+  external_user_or_operator_evidence: MISSING
+  organic_usage_boundary: CONTROLLED_RESEARCH_ONLY
+  time_to_first_value: UNKNOWN
+  operational_economics: NOT_APPLICABLE_WITH_REASON_NO_PAID_CORE_LOOP
+  shared_product_core: SATISFIED_SINGLE_STATIC_SURFACE
+  reality_ledger: SATISFIED
+  observability_receipt_path: PARTIAL_LOCALSTORAGE_PLUS_CANONICAL_RECEIPTS
+  judge_or_operator_self_serve_path: SATISFIED_FOR_BLIND_ROUTES
+  setup_reproducibility_path: SATISFIED_STATIC_INDEX_NO_BUILD
+  clean_room_core_path: SATISFIED_NO_APP_DEPENDENCIES
+  external_dependency_failure_behavior: NOT_APPLICABLE_WITH_REASON_NO_EXTERNAL_CORE_DEPENDENCY
+  production_like_behavior: NOT_APPLICABLE_WITH_REASON_PRECONCEPT_RESEARCH
+  post_vertical_slice_depth_gap_review: SATISFIED_BY_2026_10_03_RECONCILIATION
+
+product_exploitation_loop:
+  status: ACTIVE_BOUNDED_PRECONCEPT
+  activation_reason: FIRST_LIVE_RESEARCH_VERTICAL_SLICE_EXISTS
+  priority_order:
+    - external_user_blind_testing
+    - causal_legibility_and_real_consequence_depth
+    - failure_boundary_recovery_depth
+    - runtime_commit_binding
+    - observability_and_receipts
+    - additional_feature_depth_only_if_mechanism_survives
+  arbitrary_feature_count_cap: NONE
+  stop_rule: >-
+    Stop adding depth when marginal participant value, differentiation, causal clarity, resilience or learning
+    no longer justifies cost/risk at the current pre-concept stage.
+
+unresolved_unknowns:
+  - which_probe_is_understood_without_coaching
+  - whether_participants_experience_loss_relief_curiosity_or_indifference
+  - whether_current_effect_generalizes_beyond_the_lab
+  - final_product_form_after_concept_lock

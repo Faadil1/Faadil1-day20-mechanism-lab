@@ -1,0 +1,51 @@
+registry:
+  project: DAY20_MECHANISM_LAB
+  date: 2026-10-02
+  states: [ACTIVE, PROVEN, BLOCKED, N_A]
+
+  gates:
+    PRE_BUILD_REALITY_GATE:
+      status: ACTIVE
+      note: preserve real sourced negative event and counter-case before concept lock
+    MULTI_LLM_RESEARCH_GATE:
+      status: PROVEN
+      note: Gemini Grok Claude Perplexity Kimi plus DeepSeek bonus synthesized by GPT
+    COMPETITIVE_NOVELTY_KILL_GATE:
+      status: ACTIVE
+      note: collisions already killed museum old-web revival trails-only feed-control and nostalgia directions
+    TECHNICAL_REALITY_CHECK:
+      status: ACTIVE
+      note: deterministic local inference and observable state changes exist in mechanism lab
+    TRUTH_BOUNDARY_GATE:
+      status: PROVEN
+      note: OBSERVED vs INFERRED vs UNKNOWN explicitly separated
+    NEGATIVE_PATH_GATE:
+      status: ACTIVE
+      note: UNKNOWN is required when behavior cannot establish intention
+    EVIDENCE_INTEGRITY_GATE:
+      status: ACTIVE
+      note: current evidence class LOCAL_VERIFIED only
+    DETERMINISTIC_DEMO_GATE:
+      status: ACTIVE
+      note: random recall ordering removed
+    RUNTIME_COMMIT_BINDING_GATE:
+      status: BLOCKED
+      note: Cloudflare preview content is verified, but exact deployment-to-commit binding is not independently proven
+    PRODUCT_DEPTH_LIVE_REALITY:
+      status: N_A
+      note: pre-concept proof lab; activates after concept lock and material build
+    EXTERNAL_USER_EVIDENCE:
+      status: ACTIVE
+      note: blind tests are the next gate
+    CONCEPT_LOCK:
+      status: BLOCKED
+      note: comparative mechanism evidence required
+    NAMING_LOCK:
+      status: BLOCKED
+      note: public title intentionally deferred
+    DEPLOYMENT_GATE:
+      status: PROVEN
+      note: Cloudflare Pages preview verified at https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/
+    JUDGE_STORY_DEMO_QA:
+      status: N_A
+      note: activates only if project becomes judged build

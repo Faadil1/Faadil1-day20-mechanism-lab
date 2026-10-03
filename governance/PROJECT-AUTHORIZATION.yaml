@@ -1,0 +1,27 @@
+version: 1.0.0
+project: DAY20_MECHANISM_LAB
+date: 2026-10-03
+status: AUTHORIZED_BOUNDED_PRECONCEPT_VALIDATION
+authority_owner: HUMAN
+authorization_source: >-
+  Explicit 2026-10-03 user instruction to reconcile Day 20 against the current canonical system
+  and continue the project through the exact next valid gate.
+historical_backdating: false
+
+authorized_scope:
+  - canonical_reconciliation
+  - living_PRD_creation_and_evolution
+  - Product_Reality_and_Evidence_Graph_reconciliation
+  - bounded_engineering_quality_backfill
+  - comparative_mechanism_blind_testing
+  - nonterminal_project_state_updates
+
+not_authorized_by_this_record:
+  - merge_Draft_PR_1
+  - production_release_or_promotion
+  - public_final_brand_lock
+  - concept_lock_without_gate_evidence
+  - destructive_or_high_risk_external_action
+
+next_owner: pbpd
+authority_change: PROJECT_ACTIVE_PRECONCEPT_ONLY
