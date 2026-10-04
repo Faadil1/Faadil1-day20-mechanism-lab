@@ -186,3 +186,15 @@ registry:
       evidence:
         - design/D4-LIVING-COMPENDIUM-DIRECTION.md
         - design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
+
+    D4_MOBILE_VISUAL_APPROVAL:
+      status: PROVEN
+      note: human_owner_approved_mobile_initial_reorganized_return_and_reveal_states
+      evidence: design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md
+
+    D4_MOTION_CHOREOGRAPHY_PROOF:
+      status: ACTIVE
+      note: motion_law_and_reduced_motion_fallback_required_before_coded_architecture_promotion
+      evidence:
+        - design/D4-LIVING-COMPENDIUM-DIRECTION.md
+        - design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md
