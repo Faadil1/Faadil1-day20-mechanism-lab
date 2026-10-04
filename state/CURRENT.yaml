@@ -10,11 +10,11 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
+  exact_next_gate: TRACE_DISTINCTIVENESS_DIVERGENCE__VISUAL_ARTIFACTS_001
   exact_next_action: >-
-    Execute research/ROUND-1-TEST-PACKET.md on the verified v0.2 preview: one blind probe per participant,
-    start with balanced P01-P06 assignment, record Q1-Q7 verbatim before any thesis explanation, and continue
-    beyond P06 only while evidence is contradictory or insufficient.
+    Generate comparative visual artifacts for 3-4 materially different Day 20 experience directions using
+    design/DISTINCTIVENESS-ESCALATION-001.md, with desktop and phone compositions on the same causal scene.
+    Human selects a direction before presentation architecture is rebuilt or external blind testing resumes.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -154,3 +154,12 @@ surface_legibility_repair:
   code_commit: e96cbd86a87b491007ba40d60a1c7424729caec3
   static_verification: PROVEN
   external_round_1: READY_TO_RUN
+
+distinctiveness_escalation:
+  status: ACTIVE
+  trigger: HUMAN_OWNER_JUDGED_CURRENT_SURFACE_TOO_BASIC_AND_NOT_DAY_CHALLENGE_WORTHY
+  owner: trace
+  brief: design/DISTINCTIVENESS-ESCALATION-001.md
+  reference_ledger: design/REFERENCE-LEDGER-001.yaml
+  creative_escalation_level: 5_SPATIAL_GENERATIVE_COMPUTATIONAL
+  external_blind_test: PAUSED_UNTIL_REPRESENTATIVE_DIRECTION
