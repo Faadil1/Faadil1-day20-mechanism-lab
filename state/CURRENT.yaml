@@ -10,11 +10,11 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: D4_LIVING_COMPENDIUM__MOBILE_MOTION_PROOF_001
+  exact_next_gate: D4_LIVING_COMPENDIUM__MOTION_CHOREOGRAPHY_PROOF_001
   exact_next_action: >-
-    Produce the D4 mobile + motion proof set from the human-approved desktop storyboard: mobile initial/reorganized/
-    Deep-Time-return/reveal plus transition choreography and reduced-motion fallback, preserving the same canonical
-    causal model and OBSERVED/MODEL/CONSEQUENCE/UNKNOWN truth boundary.
+    Define and prove D4 motion choreography for enter, territory focus, world reorganization, bridge rerouting,
+    Deep Time return, causal map reveal and reduced-motion fallback. Motion must be driven by real canonical state
+    transitions, not decorative effects.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -180,3 +180,11 @@ d4_visual_approval:
   receipt: design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
   concept_lock_effect: NONE
   mobile_motion_proof: ACTIVE
+
+d4_mobile_visual_approval:
+  status: PROVEN
+  approved_by: HUMAN
+  approved_at: 2026-10-04
+  receipt: design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md
+  motion_proof: ACTIVE
+  concept_lock_effect: NONE
