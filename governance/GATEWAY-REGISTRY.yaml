@@ -238,3 +238,11 @@ registry:
         - design/D4-RUNTIME-FIDELITY-V1.md
         - design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
         - design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md
+
+    D4_RUNTIME_FIDELITY_V2:
+      status: ACTIVE
+      note: world_scale_monumentality_and_visual_consequence_rebuild_implemented_live_review_pending
+      evidence:
+        - design/D4-RUNTIME-FIDELITY-V2.md
+        - design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
+        - design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md
