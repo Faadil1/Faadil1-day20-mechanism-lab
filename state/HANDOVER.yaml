@@ -32,7 +32,7 @@ handover:
     - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: TRACE_DISTINCTIVENESS_DIVERGENCE__VISUAL_ARTIFACTS_001
+    id: D4_LIVING_COMPENDIUM__VISUAL_PROOF_SET_001
     owner: pbpd
     protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
@@ -40,8 +40,8 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Produce comparative desktop and mobile visual artifacts for D1-D4 in design/DISTINCTIVENESS-ESCALATION-001.md.
-      Preserve product truth and compare distinctiveness/product utility/visual quality/device usability before human selection.
+      Produce the D4 Living Compendium proof set across desktop and phone using design/D4-LIVING-COMPENDIUM-DIRECTION.md.
+      No new product claim or Concept Lock is implied by the visual selection.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
