@@ -132,7 +132,7 @@ registry:
 
     TRACE_DESIGN_ASSURANCE:
       status: ACTIVE
-      note: human_owner_judged_current_surface_materially_below_Day_Challenge_distinctiveness_bar
+      note: D4_LIVING_COMPENDIUM_selected_as_visual_direction; full_visual_proof_set_pending
       evidence:
         - design/DISTINCTIVENESS-ESCALATION-001.md
         - design/REFERENCE-LEDGER-001.yaml
@@ -164,3 +164,13 @@ registry:
     CROSS_PROJECT_LEARNING_PROMOTION:
       status: N_A
       note: no_postmortem_or_multi_project_generalization_evidence
+
+    D4_VISUAL_DIRECTION_SELECTION:
+      status: PROVEN
+      note: human_selected_D4_from_materially_different_visual_directions
+      evidence: design/D4-LIVING-COMPENDIUM-DIRECTION.md
+
+    D4_VISUAL_PROOF_SET:
+      status: ACTIVE
+      note: exact_next_gate_desktop_and_mobile_artifacts_required_before_code_architecture_promotion
+      evidence: design/D4-LIVING-COMPENDIUM-DIRECTION.md
