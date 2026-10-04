@@ -216,9 +216,17 @@ registry:
 
     D4_SPATIAL_RUNTIME_PREVIEW:
       status: ACTIVE
-      note: technical_CI_is_green_but_real_browser_runtime_is_not_yet_proven
+      note: live_staging_load_interaction_reorganization_and_return_task_trigger_are_observed_but_full_loop_is_not_yet_proven
       evidence: evidence/D4-SPATIAL-VERTICAL-SLICE-TECHNICAL-RECEIPT-2026-10-04.md
 
     D4_BUILD_REPRODUCIBILITY:
       status: ACTIVE
       note: top_level_dependencies_exactly_pinned_but_package_lock_not_yet_committed
+
+    D4_POST_VERTICAL_SLICE_FIDELITY_GAP_REVIEW:
+      status: ACTIVE
+      note: functional_vertical_slice_exists_but_visual_fidelity_to_human_approved_D4_is_not_yet_proven
+      evidence:
+        - design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
+        - design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md
+        - evidence/D4-LIVE-STAGING-OPERATOR-VIDEO-2026-10-04.md
