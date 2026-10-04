@@ -32,7 +32,7 @@ handover:
     - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: D4_LIVING_COMPENDIUM__VISUAL_PROOF_SET_001
+    id: D4_LIVING_COMPENDIUM__MOBILE_MOTION_PROOF_001
     owner: pbpd
     protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
@@ -40,8 +40,8 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Produce the D4 Living Compendium proof set across desktop and phone using design/D4-LIVING-COMPENDIUM-DIRECTION.md.
-      No new product claim or Concept Lock is implied by the visual selection.
+      Produce mobile initial/reorganized/Deep-Time-return/reveal states and the motion/reduced-motion choreography
+      using the approved D4 desktop storyboard as visual source of truth.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
