@@ -32,7 +32,7 @@ handover:
     - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: D4_LIVING_COMPENDIUM__MOTION_CHOREOGRAPHY_PROOF_001
+    id: D4_CODED_SPATIAL_VERTICAL_SLICE_001
     owner: pbpd
     protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
@@ -40,8 +40,8 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Define the D4 motion choreography and reduced-motion fallback using the approved desktop and mobile proof sets
-      as visual source of truth. Every material animation must map to canonical state change or narrative transition.
+      Build the first real interactive D4 spatial vertical slice from the approved desktop/mobile/motion system.
+      Use one canonical deterministic world state; the render layer must not become the source of truth.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
