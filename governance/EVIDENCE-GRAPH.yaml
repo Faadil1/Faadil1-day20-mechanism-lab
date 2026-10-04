@@ -1,0 +1,106 @@
+version: 1.0.0
+policy: EVIDENCE-GRAPH-POLICY.yaml
+project: DAY20_MECHANISM_LAB
+updated_at: 2026-10-03
+
+claims:
+  - claim_id: DAY20_CLAIM_PREVIEW_LIVE
+    statement: Cloudflare Pages serves the Day 20 mechanism lab and its three blind probe routes.
+    evidence_class: LIVE
+    truth_state: OBSERVED
+    graph_status: COMPLETE
+    scenario_ids: [DAY20_SCENARIO_PREVIEW_SUCCESS]
+
+  - claim_id: DAY20_CLAIM_CAUSAL_BRANCH_C
+    statement: In Probe C, prior observable actions can change which item appears third.
+    evidence_class: LOCAL
+    truth_state: OBSERVED
+    graph_status: COMPLETE
+    scenario_ids: [DAY20_SCENARIO_C_BRANCH]
+
+  - claim_id: DAY20_CLAIM_EXTERNAL_COMPREHENSION
+    statement: Blind participants can independently identify behavior-to-inference-to-consequence while recognizing that true intention remains unknown.
+    evidence_class: NOT_IMPLEMENTED
+    truth_state: UNKNOWN
+    graph_status: MISSING
+    scenario_ids: [DAY20_SCENARIO_BLIND_USER]
+
+scenarios:
+  - scenario_id: DAY20_SCENARIO_PREVIEW_SUCCESS
+    scenario_type: SUCCESS
+    preconditions:
+      - Cloudflare_preview_available
+      - blind_route_parameter_present
+    expected_consequence: correct_probe_surface_is_served_without_thesis_priming
+    runtime_execution_ids: [DAY20_RUNTIME_PREVIEW_2026_10_02]
+
+  - scenario_id: DAY20_SCENARIO_C_BRANCH
+    scenario_type: BOUNDARY
+    preconditions:
+      - deterministic_corpus
+      - first_two_actions_are_CONTINUE_CONTINUE_or_LINGER_LINGER
+    expected_consequence: third_item_differs_between_action_paths
+    runtime_execution_ids: [DAY20_RUNTIME_LOCAL_C_BRANCH_2026_10_03]
+
+  - scenario_id: DAY20_SCENARIO_BLIND_USER
+    scenario_type: SUCCESS
+    preconditions:
+      - participant_not_briefed_on_thesis
+      - one_probe_only_before_interview
+    expected_consequence: participant_describes_causal_ambiguity_without_coaching
+    runtime_execution_ids: []
+
+runtime_executions:
+  - execution_id: DAY20_RUNTIME_PREVIEW_2026_10_02
+    runtime: Cloudflare_Pages_preview
+    observed_at: 2026-10-02
+    result: PASS
+    dependency_ids: [DAY20_DEP_CLOUDFLARE]
+    receipt_ids: [DAY20_RECEIPT_PREVIEW]
+    repository: Faadil1/Faadil1-day20-mechanism-lab
+    commit_sha: ca20606f22c954b0559ccbe3381f509b3fcfca07
+    deployment_id: DAY20_DEPLOYMENT_26CA31B8
+
+  - execution_id: DAY20_RUNTIME_LOCAL_C_BRANCH_2026_10_03
+    runtime: canonical_source_static_execution_check
+    observed_at: 2026-10-03
+    result: PASS
+    dependency_ids: []
+    receipt_ids: [DAY20_RECEIPT_ENGINEERING_QUALITY, DAY20_RECEIPT_PREFLIGHT]
+    repository: Faadil1/Faadil1-day20-mechanism-lab
+    commit_sha: 8fd3c68e327b48654547b0b6dca910a6e7bcd3e7
+    deployment_id: null
+
+dependencies:
+  - dependency_id: DAY20_DEP_CLOUDFLARE
+    role: preview_static_host
+    live_or_stub: LIVE
+    load_bearing: true
+
+receipts:
+  - receipt_id: DAY20_RECEIPT_PREVIEW
+    artifact_pointer: evidence/RUNTIME-PREVIEW-VERIFICATION-2026-10-02.md
+    observed_or_generated: MANUAL_NOTE
+    contains_secret: false
+
+  - receipt_id: DAY20_RECEIPT_ENGINEERING_QUALITY
+    artifact_pointer: governance/ENGINEERING-QUALITY-RECEIPT.json
+    observed_or_generated: GENERATED_FROM_RUNTIME
+    contains_secret: false
+
+  - receipt_id: DAY20_RECEIPT_PREFLIGHT
+    artifact_pointer: research/INTERNAL-PREFLIGHT.md
+    observed_or_generated: MANUAL_NOTE
+    contains_secret: false
+
+deployments:
+  - deployment_id: DAY20_DEPLOYMENT_E037FB87
+    runtime_url_or_environment: https://26ca31b8.faadil1-day20-mechanism-lab.pages.dev/
+    deployment_identity: 26ca31b8
+    deployment_state: PREVIEW
+    commit_sha: ca20606f22c954b0559ccbe3381f509b3fcfca07
+
+unresolved_edges:
+  - DAY20_CLAIM_EXTERNAL_COMPREHENSION_has_no_external_runtime_execution_yet
+
+terminal_claims_allowed: false

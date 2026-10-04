@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "project": "DAY20_MECHANISM_LAB",
+  "repository": "Faadil1/Faadil1-day20-mechanism-lab",
+  "commit": "8fd3c68e327b48654547b0b6dca910a6e7bcd3e7",
+  "activation_reason": "ACTIVE_CODE_BEARING_PROJECT_WITHOUT_CURRENT_ENGINEERING_QUALITY_RECEIPT_DISCOVERED_AT_2026_10_03_RECONCILIATION",
+  "provider": {
+    "name": "bounded_manual_static_review_plus_github_source_checks",
+    "version": null,
+    "authority": "NONE",
+    "status_json_pointer": null
+  },
+  "scan_scope": {
+    "paths": [
+      "index.html"
+    ],
+    "excluded_paths": [
+      "governance/**",
+      "research/**",
+      "state/**",
+      "*.md",
+      "*.yaml"
+    ],
+    "languages": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "language_policy": null
+  },
+  "quality_signals": {
+    "baseline": {
+      "strict_score": null,
+      "objective_score": null,
+      "open_findings": 1
+    },
+    "after": {
+      "strict_score": null,
+      "objective_score": null,
+      "open_findings": 1
+    },
+    "score_interpretation": "SIGNAL_NOT_TERMINAL_AUTHORITY"
+  },
+  "material_findings_fixed": [],
+  "unresolved_findings": [
+    {
+      "id": "EQA-001",
+      "class": "test_or_type_health",
+      "severity": "low",
+      "summary": "No automated browser E2E or accessibility suite exists for the current single-file pre-concept lab.",
+      "evidence_pointer": "research/INTERNAL-PREFLIGHT.md",
+      "disposition": "ACCEPTED_DEBT",
+      "reason": "Current gate is qualitative mechanism validation; deterministic source checks and manual runtime content verification exist. Add browser/a11y automation only if the mechanism survives Concept Lock or if blind-test failures indicate interaction defects.",
+      "next_gate": "POST_CONCEPT_LOCK_TECHNICAL_DEPTH_IF_PROMOTED"
+    }
+  ],
+  "regression_verification": {
+    "functional_tests": "PASS",
+    "build_or_typecheck": "NOT_APPLICABLE",
+    "lint_or_static_analysis": "PASS",
+    "behavior_receipts_preserved": "PASS",
+    "notes": "GitHub canonical index.html inspected directly: JavaScript syntax parsed successfully; 32 DOM ids with no duplicates; all getElementById references resolve; Probe C deterministic branch verified F→H→B for CONTINUE/CONTINUE and F→H→D for LINGER/LINGER. No browser E2E claim is made."
+  },
+  "protected_contracts": {
+    "public_api": "NOT_APPLICABLE",
+    "evidence_schema": "PRESERVED",
+    "deterministic_scenario": "PRESERVED",
+    "security_controls": "NOT_APPLICABLE",
+    "other": [
+      "OBSERVED_INFERRED_UNKNOWN truth boundary preserved",
+      "blind mode preserved",
+      "no proprietary algorithm simulation"
+    ]
+  },
+  "scope_protection": {
+    "product_scope_expanded_for_score": false,
+    "broad_rewrite_during_freeze": false,
+    "exceptions": []
+  },
+  "evidence_pointers": [
+    "index.html",
+    "research/INTERNAL-PREFLIGHT.md",
+    "BLIND-TEST-SCRIPT.md"
+  ],
+  "verdict": "PASS_WITH_ACCEPTED_DEBT",
+  "verdict_reason": "Bounded pre-concept code is structurally coherent for the current gate. Browser E2E/a11y automation remains accepted debt and must be reconsidered if the mechanism is promoted."
+}

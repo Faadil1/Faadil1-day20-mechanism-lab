@@ -1,0 +1,200 @@
+registry:
+  project: DAY20_MECHANISM_LAB
+  date: 2026-10-03
+  policy_basis:
+    - SYSTEM-CONTROL-PLANE-POLICY.yaml
+    - PRODUCT-REALITY-POLICY.yaml@1.3.0
+    - PROJECT-LIFECYCLE-COMPLETENESS-POLICY.yaml
+    - EVIDENCE-GRAPH-POLICY.yaml
+  states: [PROVEN, ACTIVE, BLOCKED, PENDING, N_A, UNKNOWN]
+
+  gates:
+    SYSTEM_ROUTER_RECONCILIATION:
+      status: PROVEN
+      note: reconciled_against_Faadil1/faadil-agent-system_main_on_2026_10_03
+      evidence: governance/SYSTEM-RECONCILIATION-2026-10-03.md
+
+    PROJECT_STATUS_CLASSIFICATION:
+      status: PROVEN
+      note: ACTIVE_PRE_CONCEPT_RESEARCH_PROTOTYPE
+
+    HUMAN_PROJECT_AUTHORIZATION:
+      status: PROVEN
+      note: bounded_preconcept_validation_authorized
+      evidence: governance/PROJECT-AUTHORIZATION.yaml
+
+    PROBLEM_SUBJECT_RESEARCH:
+      status: PROVEN
+      note: multi_llm_plus_primary_source_checks_completed_as_research_input
+      evidence: research/MULTI-LLM-SYNTHESIS.md
+
+    MULTI_LLM_RESEARCH_GATE:
+      status: PROVEN
+      note: GPT_central_synthesis_with_Gemini_Grok_Claude_Kimi_Perplexity_and_DeepSeek_bonus
+
+    PRE_BUILD_REALITY_GATE:
+      status: PROVEN
+      note: source_verifiable_negative_event_and_countercases_preserved
+      evidence:
+        - governance/EVIDENCE-LEDGER.md
+        - research/REFERENCE-INTELLIGENCE.yaml
+
+    PROTOTYPE_KILLER_SIMPLER_ALTERNATIVE:
+      status: PROVEN
+      note: static_explainer_feed_steering_dashboard_nostalgia_and_serendipity_only_directions_killed
+      evidence:
+        - README.md
+        - research/MULTI-LLM-SYNTHESIS.md
+
+    COMPETITIVE_NOVELTY_KILL_GATE:
+      status: ACTIVE
+      note: prior_collision_research_exists_but_surviving_mechanism_requires_fresh_collision_check_before_Concept_Lock
+
+    LIVING_PRD:
+      status: PROVEN
+      note: first_canonical_PRD_created_2026_10_03_without_backdating
+      evidence: PRD-0.1.md
+
+    PRODUCT_REALITY:
+      status: ACTIVE
+      note: activated_at_this_material_touch_per_v1_3
+      evidence: governance/PRODUCT-REALITY-PACKET.yaml
+
+    PRODUCT_DEPTH_LIVE_REALITY:
+      status: ACTIVE
+      note: live_research_vertical_slice_exists; depth_gaps_remain_visible
+      evidence: governance/PRODUCT-REALITY-PACKET.yaml
+
+    PRODUCT_EXPLOITATION_LOOP:
+      status: ACTIVE
+      note: bounded_to_external_user_learning_causal_depth_failure_recovery_binding_and_observability_before_feature_expansion
+
+    TECHNICAL_REALITY_CHECK:
+      status: PROVEN
+      note: deterministic_local_inference_and_real_state_changes_revalidated
+      evidence:
+        - research/INTERNAL-PREFLIGHT.md
+        - governance/ENGINEERING-QUALITY-RECEIPT.json
+
+    TRUTH_BOUNDARY_GATE:
+      status: PROVEN
+      note: OBSERVED_INFERRED_UNKNOWN_explicitly_separated
+
+    NEGATIVE_PATH_GATE:
+      status: PROVEN
+      note: UNKNOWN_is_preserved_when_behavior_cannot_establish_intention
+
+    EVIDENCE_INTEGRITY_GATE:
+      status: ACTIVE
+      note: preview_local_external_user_and_commit_binding_classes_are_not_conflated
+
+    EVIDENCE_GRAPH_GATE:
+      status: ACTIVE
+      note: graph_created_but_live_preview_claim_is_PARTIAL_due_missing_commit_binding
+      evidence: governance/EVIDENCE-GRAPH.yaml
+
+    ENGINEERING_QUALITY_ASSURANCE:
+      status: PROVEN
+      note: bounded_active_project_backfill_pass_with_accepted_debt
+      evidence: governance/ENGINEERING-QUALITY-RECEIPT.json
+
+    DETERMINISTIC_DEMO_GATE:
+      status: PROVEN
+      note: random_recall_order_removed_and_Probe_C_causal_branch_revalidated
+
+    DEPLOYMENT_GATE:
+      status: PROVEN
+      note: Cloudflare_Pages_preview_content_verified
+      evidence: evidence/RUNTIME-PREVIEW-VERIFICATION-2026-10-02.md
+
+    RUNTIME_COMMIT_BINDING_GATE:
+      status: PROVEN
+      note: Cloudflare_preview_26ca31b8_is_bound_to_commit_ca20606f22c954b0559ccbe3381f509b3fcfca07
+
+    BLIND_SURFACE_LEGIBILITY_REPAIR:
+      status: PROVEN
+      note: v0_2_code_repaired_and_verified_on_Cloudflare_preview_26ca31b8
+      evidence: research/SURFACE-LEGIBILITY-REPAIR-2026-10-04.md
+
+    EXTERNAL_USER_EVIDENCE:
+      status: BLOCKED
+      note: paused_until_representative_visual_direction_is_selected_and_implemented_enough_to_test_the_mechanism
+      evidence: research/ROUND-1-TEST-PACKET.md
+
+    REFERENCE_INTELLIGENCE:
+      status: ACTIVE
+      note: bounded_project_local_packet_only_no_central_promotion
+      evidence: research/REFERENCE-INTELLIGENCE.yaml
+
+    SPEC_KIT_OR_EQUIVALENT:
+      status: N_A
+      note: single_file_preconcept_mechanism_lab_does_not_currently_need_spec_driven_execution; reevaluate_if_concept_locks_and_scope_expands
+
+    TRACE_DESIGN_ASSURANCE:
+      status: ACTIVE
+      note: D4_LIVING_COMPENDIUM_selected_as_visual_direction; full_visual_proof_set_pending
+      evidence:
+        - design/DISTINCTIVENESS-ESCALATION-001.md
+        - design/REFERENCE-LEDGER-001.yaml
+
+    PRE_LAUNCH_SHIP_ASSURANCE:
+      status: N_A
+      note: project_is_not_release_or_submission_candidate
+
+    PROJECT_FINISHER_TERMINAL_ASSURANCE:
+      status: N_A
+      note: no_terminal_transition_is_being_requested
+
+    CONCEPT_LOCK:
+      status: BLOCKED
+      note: comparative_external_mechanism_evidence_missing
+
+    NAMING_LOCK:
+      status: BLOCKED
+      note: public_title_deferred_until_after_Concept_Lock
+
+    JUDGE_STORY_DEMO_QA:
+      status: N_A
+      note: no_formal_judged_build_context_currently_applies
+
+    RULE_LIFECYCLE_CHANGE:
+      status: N_A
+      note: reconciliation_decision_is_NO_CHANGE
+
+    CROSS_PROJECT_LEARNING_PROMOTION:
+      status: N_A
+      note: no_postmortem_or_multi_project_generalization_evidence
+
+    D4_VISUAL_DIRECTION_SELECTION:
+      status: PROVEN
+      note: human_selected_D4_from_materially_different_visual_directions
+      evidence: design/D4-LIVING-COMPENDIUM-DIRECTION.md
+
+    D4_VISUAL_PROOF_SET:
+      status: ACTIVE
+      note: desktop_storyboard_approved_mobile_and_motion_proof_still_required_before_code_architecture_promotion
+      evidence: design/D4-LIVING-COMPENDIUM-DIRECTION.md
+
+    D4_DESKTOP_STORYBOARD_APPROVAL:
+      status: PROVEN
+      note: human_owner_explicitly_approved_the_D4_cinematic_desktop_storyboard
+      evidence: design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
+
+    D4_MOBILE_MOTION_PROOF:
+      status: ACTIVE
+      note: mobile_states_motion_law_and_reduced_motion_fallback_required_before_code_architecture_promotion
+      evidence:
+        - design/D4-LIVING-COMPENDIUM-DIRECTION.md
+        - design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
+
+    D4_MOBILE_VISUAL_APPROVAL:
+      status: PROVEN
+      note: human_owner_approved_mobile_initial_reorganized_return_and_reveal_states
+      evidence: design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md
+
+    D4_MOTION_CHOREOGRAPHY_PROOF:
+      status: ACTIVE
+      note: motion_law_and_reduced_motion_fallback_required_before_coded_architecture_promotion
+      evidence:
+        - design/D4-LIVING-COMPENDIUM-DIRECTION.md
+        - design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md

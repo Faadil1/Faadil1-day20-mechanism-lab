@@ -1,0 +1,63 @@
+version: 1.0.0
+project: DAY20_MECHANISM_LAB
+date: 2026-10-03
+policy: REFERENCE-INTELLIGENCE-POLICY.yaml
+authority: NONE
+storage: PROJECT_LOCAL
+central_registry_promotion: NOT_REQUESTED
+reason: >-
+  These references materially inform Day 20 but have not earned cross-project canonical status.
+  Keep them project-local until repeated reuse or a later explicit promotion decision.
+
+patterns:
+  - reference_id: DAY20_RI_001
+    title: Recommendations based on actual versus ideal preferences
+    source_url: https://www.nature.com/articles/s41598-023-34192-x
+    requested_context: retrospective_mismatch_between_engagement_and_endorsed_preference
+    pipeline_status: ADOPTED
+    trigger_domains: [recommender_systems, behavioral_signals, causal_legibility]
+    primary_verification_required: true
+    primary_verification_status: VERIFIED_PRIMARY_PUBLICATION
+    last_checked: 2026-10-02
+    authority: NONE
+    adoption_status: PROJECT_LOCAL_PROBLEM_EVIDENCE
+    preserved_constraints:
+      - published_2023_not_2025
+      - engagement_and_enjoyment_do_not_equal_reflective_wellbeing
+      - do_not_generalize_to_all_recommenders_or_users
+
+  - reference_id: DAY20_RI_002
+    title: Rethinking Social Media Design to Enhance User Well-being
+    source_url: https://arxiv.org/abs/2602.15745
+    requested_context: entanglement_folk_theories_emotional_context_and_causal_uncertainty
+    pipeline_status: WATCH
+    trigger_domains: [HCI, recommender_systems, causal_legibility]
+    primary_verification_required: true
+    primary_verification_status: VERIFIED_SOURCE_IDENTITY_WITH_LIMITED_GENERALIZABILITY
+    last_checked: 2026-10-02
+    authority: NONE
+    adoption_status: QUALITATIVE_SUPPORT_ONLY
+    preserved_constraints:
+      - small_specific_participant_sample
+      - do_not_generalize_to_all_users
+      - emotional_mismatch_can_have_positive_or_negative_effects
+
+  - reference_id: DAY20_RI_003
+    title: Agency Among Agents — Designing with Hypertextual Friction in the Algorithmic Web
+    source_url: https://arxiv.org/abs/2507.23585
+    requested_context: friction_traceability_structure_and_collision_check
+    pipeline_status: REJECTED
+    trigger_domains: [hypertext, HCI, design, competitive_collision]
+    primary_verification_required: true
+    primary_verification_status: VERIFIED_SOURCE_IDENTITY
+    last_checked: 2026-10-02
+    authority: NONE
+    adoption_status: REJECTED_AS_CORE_DIRECTION_RETAINED_AS_COLLISION_REFERENCE
+    preserved_constraints:
+      - friction_and_traceability_alone_are_not_novel_enough_for_Day20
+
+routing:
+  owner_for_decision: pbpd
+  decision: USE_BOUNDED_PROJECT_REFERENCES_ONLY
+  no_reference_creates_authority: true
+  no_reference_creates_global_rule: true
