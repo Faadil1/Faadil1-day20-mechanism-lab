@@ -188,3 +188,11 @@ d4_mobile_visual_approval:
   receipt: design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md
   motion_proof: ACTIVE
   concept_lock_effect: NONE
+
+d4_motion_animatic:
+  status: GENERATED_AWAITING_HUMAN_REVIEW
+  receipt: design/D4-MOTION-ANIMATIC-RECEIPT-001.md
+  standard_duration_s: 14.4
+  reduced_motion_duration_s: 12.1
+  human_approval: PENDING
+  next_if_approved: D4_CODED_SPATIAL_VERTICAL_SLICE_001
