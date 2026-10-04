@@ -32,7 +32,7 @@ handover:
     - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: D4_RUNTIME_CORE_LOOP_COMPLETION_AND_FIDELITY_GAP_REVIEW_001
+    id: D4_RUNTIME_FIDELITY_V1__LIVE_VISUAL_REVIEW
     owner: pbpd
     protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
@@ -40,8 +40,8 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Complete the live Deep Time return flow through the causal reveal and reset, then compare the functional
-      vertical slice against the human-approved D4 visual direction to identify the next highest-value fidelity gaps.
+      Open the live Cloudflare preview for design/d4-runtime-fidelity-v1 and compare it against the approved D4
+      visual source of truth. Human owner decides PASS or REVISE before any merge into the spatial build branch.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that

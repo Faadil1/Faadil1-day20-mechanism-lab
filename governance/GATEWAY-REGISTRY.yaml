@@ -230,3 +230,11 @@ registry:
         - design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
         - design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md
         - evidence/D4-LIVE-STAGING-OPERATOR-VIDEO-2026-10-04.md
+
+    D4_RUNTIME_FIDELITY_V1:
+      status: ACTIVE
+      note: architectural_fidelity_rebuild_is_CI_green_but_live_browser_visual_review_is_required_before_promotion
+      evidence:
+        - design/D4-RUNTIME-FIDELITY-V1.md
+        - design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
+        - design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md

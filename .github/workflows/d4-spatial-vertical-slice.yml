@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - build/d4-spatial-vertical-slice
+      - design/d4-runtime-fidelity-v1
   pull_request:
     branches:
       - preconcept/comparative-mechanism-proof

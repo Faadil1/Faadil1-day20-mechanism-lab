@@ -10,11 +10,11 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: D4_RUNTIME_CORE_LOOP_COMPLETION_AND_FIDELITY_GAP_REVIEW_001
+  exact_next_gate: D4_RUNTIME_FIDELITY_V1__LIVE_VISUAL_REVIEW
   exact_next_action: >-
-    On the live staging runtime, complete the return task by reaching Deep Time, verify the causal reveal and reset,
-    then run the first post-vertical-slice visual fidelity gap review against the approved D4 desktop/mobile direction.
-    Treat runtime completion and visual finish as separate proofs.
+    Deploy or open the Cloudflare preview generated from design/d4-runtime-fidelity-v1, review the real browser
+    result against the human-approved D4 storyboard, and decide PASS / REVISE based on spatial depth, architectural
+    richness, readability, navigation, mobile composition and reveal fidelity. Do not merge before human visual approval.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -233,3 +233,15 @@ d4_live_staging_runtime:
   deployment_commit_binding: UNKNOWN
   full_core_loop: PARTIAL
   visual_fidelity_to_approved_D4: NOT_PROVEN
+
+d4_runtime_fidelity_v1:
+  status: IMPLEMENTED_CI_GREEN
+  branch: design/d4-runtime-fidelity-v1
+  receipt: design/D4-RUNTIME-FIDELITY-V1.md
+  pr: 4
+  ci_run: 37234319051
+  tests: PASS_5_OF_5
+  typecheck: PASS
+  build: PASS
+  human_live_visual_review: PENDING
+  concept_lock_effect: NONE

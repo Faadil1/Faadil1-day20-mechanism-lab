@@ -81,7 +81,7 @@ export default function App() {
 
       <header className="topline">
         <div>
-          <span className="eyebrow">DAY 20 / SPATIAL STUDY</span>
+          <span className="eyebrow">DAY 20 / LIVING ATLAS</span>
           <strong>Living Compendium</strong>
         </div>
         <button className="quiet-button" onClick={reset}>Reset</button>
@@ -116,8 +116,8 @@ export default function App() {
             transition={transition}
           >
             <span className="eyebrow">EXPLORE</span>
-            <h2>Follow what pulls you closer.</h2>
-            <p>{Math.min(uniqueVisits, 4)} / 4 territories explored</p>
+            <h2>Follow what draws you in.</h2>
+            <p>{Math.min(uniqueVisits, 4)} / 4 territories crossed</p>
           </motion.section>
         )}
 
@@ -175,7 +175,7 @@ export default function App() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ ...transition, duration: reduceMotion ? 0.18 : 1.1 }}
         >
-          <span className="eyebrow">YOUR MAP / CAUSAL REPLAY</span>
+          <span className="eyebrow">YOUR PERSONAL WORLD / CAUSAL REPLAY</span>
           <h2>The world did not end where it started.</h2>
           <div className="world-stat-row">
             <div><strong>{world.mutations.length}</strong><span>model updates</span></div>
