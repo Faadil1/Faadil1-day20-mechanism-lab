@@ -207,9 +207,18 @@ registry:
         - design/D4-MOTION-HUMAN-APPROVAL-2026-10-04.md
 
     D4_CODED_SPATIAL_VERTICAL_SLICE:
-      status: ACTIVE
+      status: PROVEN
       note: exact_next_gate_real_interactive_world_state_and_rendering_required
       evidence:
         - design/D4-LIVING-COMPENDIUM-DIRECTION.md
         - design/D4-IMPLEMENTATION-BRIEF-0.1.md
         - design/D4-MOTION-CHOREOGRAPHY-PROOF-001.md
+
+    D4_SPATIAL_RUNTIME_PREVIEW:
+      status: ACTIVE
+      note: technical_CI_is_green_but_real_browser_runtime_is_not_yet_proven
+      evidence: evidence/D4-SPATIAL-VERTICAL-SLICE-TECHNICAL-RECEIPT-2026-10-04.md
+
+    D4_BUILD_REPRODUCIBILITY:
+      status: ACTIVE
+      note: top_level_dependencies_exactly_pinned_but_package_lock_not_yet_committed
