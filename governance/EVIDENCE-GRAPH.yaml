@@ -8,7 +8,7 @@ claims:
     statement: Cloudflare Pages serves the Day 20 mechanism lab and its three blind probe routes.
     evidence_class: LIVE
     truth_state: OBSERVED
-    graph_status: PARTIAL
+    graph_status: COMPLETE
     scenario_ids: [DAY20_SCENARIO_PREVIEW_SUCCESS]
 
   - claim_id: DAY20_CLAIM_CAUSAL_BRANCH_C
@@ -58,8 +58,8 @@ runtime_executions:
     dependency_ids: [DAY20_DEP_CLOUDFLARE]
     receipt_ids: [DAY20_RECEIPT_PREVIEW]
     repository: Faadil1/Faadil1-day20-mechanism-lab
-    commit_sha: UNKNOWN
-    deployment_id: DAY20_DEPLOYMENT_E037FB87
+    commit_sha: ca20606f22c954b0559ccbe3381f509b3fcfca07
+    deployment_id: DAY20_DEPLOYMENT_26CA31B8
 
   - execution_id: DAY20_RUNTIME_LOCAL_C_BRANCH_2026_10_03
     runtime: canonical_source_static_execution_check
@@ -95,14 +95,12 @@ receipts:
 
 deployments:
   - deployment_id: DAY20_DEPLOYMENT_E037FB87
-    runtime_url_or_environment: https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/
-    deployment_identity: e037fb87
+    runtime_url_or_environment: https://26ca31b8.faadil1-day20-mechanism-lab.pages.dev/
+    deployment_identity: 26ca31b8
     deployment_state: PREVIEW
-    commit_sha: UNKNOWN
+    commit_sha: ca20606f22c954b0559ccbe3381f509b3fcfca07
 
 unresolved_edges:
-  - DAY20_RUNTIME_PREVIEW_2026_10_02_to_exact_commit
-  - exact_commit_to_DAY20_DEPLOYMENT_E037FB87
   - DAY20_CLAIM_EXTERNAL_COMPREHENSION_has_no_external_runtime_execution_yet
 
 terminal_claims_allowed: false
