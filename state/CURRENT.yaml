@@ -10,11 +10,10 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: TRACE_DISTINCTIVENESS_DIVERGENCE__VISUAL_ARTIFACTS_001
+  exact_next_gate: D4_LIVING_COMPENDIUM__VISUAL_PROOF_SET_001
   exact_next_action: >-
-    Generate comparative visual artifacts for 3-4 materially different Day 20 experience directions using
-    design/DISTINCTIVENESS-ESCALATION-001.md, with desktop and phone compositions on the same causal scene.
-    Human selects a direction before presentation architecture is rebuilt or external blind testing resumes.
+    Produce the D4 Living Compendium visual proof set: desktop initial/reorganized/Deep-Time-return/reveal plus
+    mobile initial/reorganized/reveal, all using the same causal world and preserving OBSERVED/MODEL/CONSEQUENCE/UNKNOWN.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -163,3 +162,12 @@ distinctiveness_escalation:
   reference_ledger: design/REFERENCE-LEDGER-001.yaml
   creative_escalation_level: 5_SPATIAL_GENERATIVE_COMPUTATIONAL
   external_blind_test: PAUSED_UNTIL_REPRESENTATIVE_DIRECTION
+
+visual_direction:
+  selected: D4_LIVING_COMPENDIUM
+  selected_by: HUMAN
+  selected_at: 2026-10-04
+  selection_scope: VISUAL_AND_EXPERIENCE_DIRECTION_ONLY
+  concept_lock_effect: NONE
+  direction_brief: design/D4-LIVING-COMPENDIUM-DIRECTION.md
+  implementation_brief: design/D4-IMPLEMENTATION-BRIEF-0.1.md
