@@ -10,10 +10,11 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: D4_LIVING_COMPENDIUM__VISUAL_PROOF_SET_001
+  exact_next_gate: D4_LIVING_COMPENDIUM__MOBILE_MOTION_PROOF_001
   exact_next_action: >-
-    Produce the D4 Living Compendium visual proof set: desktop initial/reorganized/Deep-Time-return/reveal plus
-    mobile initial/reorganized/reveal, all using the same causal world and preserving OBSERVED/MODEL/CONSEQUENCE/UNKNOWN.
+    Produce the D4 mobile + motion proof set from the human-approved desktop storyboard: mobile initial/reorganized/
+    Deep-Time-return/reveal plus transition choreography and reduced-motion fallback, preserving the same canonical
+    causal model and OBSERVED/MODEL/CONSEQUENCE/UNKNOWN truth boundary.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -171,3 +172,11 @@ visual_direction:
   concept_lock_effect: NONE
   direction_brief: design/D4-LIVING-COMPENDIUM-DIRECTION.md
   implementation_brief: design/D4-IMPLEMENTATION-BRIEF-0.1.md
+
+d4_visual_approval:
+  status: PROVEN_DESKTOP_STORYBOARD
+  approved_by: HUMAN
+  approved_at: 2026-10-04
+  receipt: design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
+  concept_lock_effect: NONE
+  mobile_motion_proof: ACTIVE
