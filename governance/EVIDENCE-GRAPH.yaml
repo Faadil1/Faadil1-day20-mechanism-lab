@@ -104,3 +104,74 @@ unresolved_edges:
   - DAY20_CLAIM_EXTERNAL_COMPREHENSION_has_no_external_runtime_execution_yet
 
 terminal_claims_allowed: false
+
+
+  - claim_id: DAY20_CLAIM_D4_CODED_BUILD
+    statement: The D4 Living Compendium coded spatial vertical slice passes deterministic model tests, TypeScript typecheck, and production Vite build.
+    evidence_class: LOCAL
+    truth_state: OBSERVED
+    graph_status: COMPLETE
+    scenario_ids: [DAY20_SCENARIO_D4_CI]
+
+  - claim_id: DAY20_CLAIM_D4_RUNTIME_CORE_LOOP
+    statement: The D4 Living Compendium full spatial core loop works in a real browser on representative desktop/mobile/reduced-motion paths.
+    evidence_class: LIVE
+    truth_state: OBSERVED_PARTIAL
+    graph_status: PARTIAL
+    scenario_ids: [DAY20_SCENARIO_D4_RUNTIME]
+
+scenarios:
+  - scenario_id: DAY20_SCENARIO_D4_CI
+    scenario_type: SUCCESS
+    preconditions:
+      - branch_build_d4_spatial_vertical_slice
+      - Node_22
+    expected_consequence: tests_typecheck_and_production_build_all_pass
+    runtime_execution_ids: [DAY20_RUNTIME_D4_GITHUB_ACTIONS_2026_10_04]
+
+  - scenario_id: DAY20_SCENARIO_D4_RUNTIME
+    scenario_type: SUCCESS
+    preconditions:
+      - Vite_preview_deployed
+      - WebGL_available_or_accessible_fallback
+    expected_consequence: full_core_loop_completes_and_reveal_matches_same_mutation_log
+    runtime_execution_ids: []
+
+runtime_executions:
+  - execution_id: DAY20_RUNTIME_D4_GITHUB_ACTIONS_2026_10_04
+    runtime: GitHub_Actions_ubuntu_24_04_Node_22
+    observed_at: 2026-10-04
+    result: PASS
+    dependency_ids: [DAY20_DEP_NPM]
+    receipt_ids: [DAY20_RECEIPT_D4_TECHNICAL]
+    repository: Faadil1/Faadil1-day20-mechanism-lab
+    commit_sha: 945ba686f766100842d0bb8dae56daf33746e13e
+    deployment_id: null
+
+dependencies:
+  - dependency_id: DAY20_DEP_NPM
+    role: install_exact_top_level_build_dependencies
+    live_or_stub: LIVE
+    load_bearing: true
+
+receipts:
+  - receipt_id: DAY20_RECEIPT_D4_TECHNICAL
+    artifact_pointer: evidence/D4-SPATIAL-VERTICAL-SLICE-TECHNICAL-RECEIPT-2026-10-04.md
+    observed_or_generated: GENERATED_FROM_RUNTIME
+    contains_secret: false
+
+  - claim_id: DAY20_CLAIM_D4_VISUAL_FIDELITY
+    statement: The coded runtime materially matches the human-approved D4 Living Compendium visual direction across desktop and mobile.
+    evidence_class: LIVE
+    truth_state: UNKNOWN
+    graph_status: MISSING
+    scenario_ids: [DAY20_SCENARIO_D4_FIDELITY]
+
+scenarios:
+  - scenario_id: DAY20_SCENARIO_D4_FIDELITY
+    scenario_type: BOUNDARY
+    preconditions:
+      - live_D4_staging_runtime
+      - approved_D4_desktop_and_mobile_visual_artifacts
+    expected_consequence: runtime_matches_the_approved_spatial_architectural_and_causal_visual_language_without_losing_usability
+    runtime_execution_ids: []

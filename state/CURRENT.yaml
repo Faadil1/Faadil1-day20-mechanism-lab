@@ -10,12 +10,11 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: D4_CODED_SPATIAL_VERTICAL_SLICE_001
+  exact_next_gate: D4_RUNTIME_CORE_LOOP_COMPLETION_AND_FIDELITY_GAP_REVIEW_001
   exact_next_action: >-
-    Build the first real D4 Living Compendium coded spatial vertical slice using React/TypeScript with R3F/Three.js,
-    deterministic canonical world-state mutations and Motion overlays. The slice must include ENTER, real territory
-    exploration, behavior-driven world reorganization, FIND DEEP TIME AGAIN, causal replay from the actual mutation
-    log, and the same-state reduced-motion path.
+    On the live staging runtime, complete the return task by reaching Deep Time, verify the causal reveal and reset,
+    then run the first post-vertical-slice visual fidelity gap review against the approved D4 desktop/mobile direction.
+    Treat runtime completion and visual finish as separate proofs.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -205,3 +204,32 @@ d4_motion_approval:
   receipt: design/D4-MOTION-HUMAN-APPROVAL-2026-10-04.md
   coded_vertical_slice: ACTIVE
   concept_lock_effect: NONE
+
+d4_spatial_vertical_slice:
+  status: TECHNICAL_REALITY_PROVEN
+  branch: build/d4-spatial-vertical-slice
+  tested_commit: 945ba686f766100842d0bb8dae56daf33746e13e
+  receipt: evidence/D4-SPATIAL-VERTICAL-SLICE-TECHNICAL-RECEIPT-2026-10-04.md
+  ci_run: 37215134166
+  model_tests: PASS_5_OF_5
+  typecheck: PASS
+  production_build: PASS
+  runtime_preview: PENDING
+  external_user_evidence: NOT_YET_OBSERVED
+  concept_lock_effect: NONE
+
+d4_live_staging_runtime:
+  url: https://faadil1-day20-d4-preview.pages.dev/
+  evidence_class: LIVE_STAGING_PREVIEW
+  operator_video_receipt: evidence/D4-LIVE-STAGING-OPERATOR-VIDEO-2026-10-04.md
+  world_load: OBSERVED
+  territory_interaction: OBSERVED
+  world_reorganization: OBSERVED
+  deep_time_return_task_trigger: OBSERVED
+  deep_time_return_success: UNKNOWN
+  causal_reveal: UNKNOWN
+  mobile_runtime: UNKNOWN
+  reduced_motion_runtime: UNKNOWN
+  deployment_commit_binding: UNKNOWN
+  full_core_loop: PARTIAL
+  visual_fidelity_to_approved_D4: NOT_PROVEN

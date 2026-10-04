@@ -32,7 +32,7 @@ handover:
     - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: D4_CODED_SPATIAL_VERTICAL_SLICE_001
+    id: D4_RUNTIME_CORE_LOOP_COMPLETION_AND_FIDELITY_GAP_REVIEW_001
     owner: pbpd
     protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
@@ -40,8 +40,8 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Build the first real interactive D4 spatial vertical slice from the approved desktop/mobile/motion system.
-      Use one canonical deterministic world state; the render layer must not become the source of truth.
+      Complete the live Deep Time return flow through the causal reveal and reset, then compare the functional
+      vertical slice against the human-approved D4 visual direction to identify the next highest-value fidelity gaps.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
