@@ -10,11 +10,12 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: D4_LIVING_COMPENDIUM__MOTION_CHOREOGRAPHY_PROOF_001
+  exact_next_gate: D4_CODED_SPATIAL_VERTICAL_SLICE_001
   exact_next_action: >-
-    Define and prove D4 motion choreography for enter, territory focus, world reorganization, bridge rerouting,
-    Deep Time return, causal map reveal and reduced-motion fallback. Motion must be driven by real canonical state
-    transitions, not decorative effects.
+    Build the first real D4 Living Compendium coded spatial vertical slice using React/TypeScript with R3F/Three.js,
+    deterministic canonical world-state mutations and Motion overlays. The slice must include ENTER, real territory
+    exploration, behavior-driven world reorganization, FIND DEEP TIME AGAIN, causal replay from the actual mutation
+    log, and the same-state reduced-motion path.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -196,3 +197,11 @@ d4_motion_animatic:
   reduced_motion_duration_s: 12.1
   human_approval: PENDING
   next_if_approved: D4_CODED_SPATIAL_VERTICAL_SLICE_001
+
+d4_motion_approval:
+  status: PROVEN
+  approved_by: HUMAN
+  approved_at: 2026-10-04
+  receipt: design/D4-MOTION-HUMAN-APPROVAL-2026-10-04.md
+  coded_vertical_slice: ACTIVE
+  concept_lock_effect: NONE
