@@ -32,7 +32,7 @@ handover:
     - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
+    id: BLIND_SURFACE_LEGIBILITY_REPAIR__RUNTIME_VERIFY_V0_2
     owner: pbpd
     protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
@@ -40,9 +40,8 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Execute research/ROUND-1-TEST-PACKET.md. Seed P01-P06 across A/B/C, one blind probe each, capture Q1-Q7
-      verbatim using research/blind-test-results/RESULT-TEMPLATE.yaml, and continue beyond P06 only while
-      evidence remains contradictory or insufficient.
+      Obtain the new Cloudflare preview for the v0.2 branch head, verify all three blind routes and the repaired
+      interaction behaviors, then restore COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
