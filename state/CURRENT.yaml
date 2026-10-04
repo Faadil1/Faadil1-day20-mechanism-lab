@@ -10,11 +10,10 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
+  exact_next_gate: BLIND_SURFACE_LEGIBILITY_REPAIR__RUNTIME_VERIFY_V0_2
   exact_next_action: >-
-    Execute research/ROUND-1-TEST-PACKET.md: seed P01-P06 with balanced A/B/C assignment, one blind probe
-    per participant, no thesis briefing, capture Q1-Q7 verbatim using research/blind-test-results/RESULT-TEMPLATE.yaml,
-    and continue beyond P06 only while evidence is contradictory or insufficient.
+    Wait for Cloudflare Pages to deploy the v0.2 branch head, obtain the new preview URL, verify neutral blind
+    routes A/B/C and the repaired interactions, then update the Round 1 packet to the verified URL before P01.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -145,3 +144,11 @@ round_1_external_blind_test:
   seed_assignment: [P01_A, P02_B, P03_C, P04_A, P05_B, P06_C]
   fixed_sample_size_rule: false
   first_result_status: PENDING
+
+surface_legibility_repair:
+  status: ACTIVE_AWAITING_RUNTIME_VERIFICATION
+  trigger: OPERATOR_SCREEN_RECORDING_REVIEW
+  receipt: research/SURFACE-LEGIBILITY-REPAIR-2026-10-04.md
+  code_commit: e96cbd86a87b491007ba40d60a1c7424729caec3
+  static_verification: PROVEN
+  external_round_1: PAUSED
