@@ -100,7 +100,7 @@ export default function App() {
             <div className="hero-copy">
               <span className="eyebrow">A LIVING INFORMATION WORLD</span>
               <h1>A world that rearranges itself.</h1>
-              <p>Enter without a map. Follow whatever draws you in.</p>
+              <p>Enter a living atlas. What you do will change what remains near you.</p>
               <button className="primary-button" onClick={enter}>Enter the compendium</button>
             </div>
           </motion.section>
@@ -130,9 +130,9 @@ export default function App() {
             exit={{ opacity: 0 }}
             transition={{ ...transition, duration: 1.2 }}
           >
-            <span className="eyebrow">ONE LAST TASK</span>
+            <span className="eyebrow">THE ATLAS HAS MOVED</span>
             <h2>Find Deep Time again.</h2>
-            <p>Use the world as it is now.</p>
+            <p>The landmark is still here. The path is not.</p>
           </motion.section>
         )}
       </AnimatePresence>
