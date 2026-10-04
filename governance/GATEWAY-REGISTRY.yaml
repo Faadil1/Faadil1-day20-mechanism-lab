@@ -172,5 +172,17 @@ registry:
 
     D4_VISUAL_PROOF_SET:
       status: ACTIVE
-      note: exact_next_gate_desktop_and_mobile_artifacts_required_before_code_architecture_promotion
+      note: desktop_storyboard_approved_mobile_and_motion_proof_still_required_before_code_architecture_promotion
       evidence: design/D4-LIVING-COMPENDIUM-DIRECTION.md
+
+    D4_DESKTOP_STORYBOARD_APPROVAL:
+      status: PROVEN
+      note: human_owner_explicitly_approved_the_D4_cinematic_desktop_storyboard
+      evidence: design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
+
+    D4_MOBILE_MOTION_PROOF:
+      status: ACTIVE
+      note: mobile_states_motion_law_and_reduced_motion_fallback_required_before_code_architecture_promotion
+      evidence:
+        - design/D4-LIVING-COMPENDIUM-DIRECTION.md
+        - design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
