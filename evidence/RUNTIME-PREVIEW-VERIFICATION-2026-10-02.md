@@ -20,3 +20,28 @@ Not proven:
 
 Truth boundary:
 the runtime is a **Cloudflare Pages preview**, not a production release.
+
+
+## v0.2 runtime re-verification — 2026-10-04
+
+Cloudflare deployment URL:
+`https://26ca31b8.faadil1-day20-mechanism-lab.pages.dev/`
+
+Cloudflare dashboard source:
+`ca20606f22c954b0559ccbe3381f509b3fcfca07` (displayed as `ca20606`)
+
+Observed v0.2 content markers at runtime:
+- `The map is yours to move through.`
+- `Read naturally. Move on whenever you want.`
+- neutral blind framing `INTERACTION STUDY / Try this short experiment.`
+
+Blind route checks:
+- `?blind=1&probe=a&pid=P01`
+- `?blind=1&probe=b&pid=P02`
+- `?blind=1&probe=c&pid=P03`
+
+Binding verdict:
+**RUNTIME → COMMIT → DEPLOYMENT = PROVEN for this preview deployment.**
+
+Scope boundary:
+This proves deployment identity/content binding, not external participant comprehension and not full automated browser interaction coverage.
