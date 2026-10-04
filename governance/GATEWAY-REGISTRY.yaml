@@ -117,8 +117,8 @@ registry:
       evidence: research/SURFACE-LEGIBILITY-REPAIR-2026-10-04.md
 
     EXTERNAL_USER_EVIDENCE:
-      status: PENDING
-      note: exact_next_gate
+      status: BLOCKED
+      note: paused_until_representative_visual_direction_is_selected_and_implemented_enough_to_test_the_mechanism
       evidence: research/ROUND-1-TEST-PACKET.md
 
     REFERENCE_INTELLIGENCE:
@@ -131,8 +131,11 @@ registry:
       note: single_file_preconcept_mechanism_lab_does_not_currently_need_spec_driven_execution; reevaluate_if_concept_locks_and_scope_expands
 
     TRACE_DESIGN_ASSURANCE:
-      status: PENDING
-      note: intentionally_deferred_until_a_mechanism_survives_blind_testing_and_experience_design_becomes_material
+      status: ACTIVE
+      note: human_owner_judged_current_surface_materially_below_Day_Challenge_distinctiveness_bar
+      evidence:
+        - design/DISTINCTIVENESS-ESCALATION-001.md
+        - design/REFERENCE-LEDGER-001.yaml
 
     PRE_LAUNCH_SHIP_ASSURANCE:
       status: N_A
