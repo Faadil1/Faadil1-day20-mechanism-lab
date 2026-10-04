@@ -80,9 +80,9 @@ svg{width:100%;height:100%}
 <body>
 <main>
 <header>
-  <div class="kicker" id="topKicker">DAY 20 / MECHANISM STUDY</div>
-  <h1 id="topTitle">Behavior is evidence.<br>It is not intention.</h1>
-  <p id="topSub">Three small experiments about what a system can observe, infer, and change.</p>
+  <div class="kicker" id="topKicker">INTERACTION STUDY</div>
+  <h1 id="topTitle">Try this short experiment.</h1>
+  <p id="topSub">Use it however feels natural. There is no correct way to interact.</p>
 </header>
 
 <div class="tabs" id="tabs">
@@ -119,9 +119,10 @@ svg{width:100%;height:100%}
 const q=new URLSearchParams(location.search);
 const BLIND=q.get("blind")==="1";
 const PROBE=q.get("probe");
+const PID=q.get("pid")||"anon";
 const DEBUG=q.get("debug")==="1";
 const store=BLIND?sessionStorage:localStorage;
-const storeKey="day20-v02-"+(PROBE||"lab");
+const storeKey="day20-v02-"+(PROBE||"lab")+"-"+PID;
 
 const corpus=[
 {id:"A",title:"Signal Garden",short:"Signal Garden",topic:"systems",depth:.86,novelty:.45,light:.25,text:"A tiny ecosystem where simple rules produce outcomes nobody selected directly."},
@@ -352,10 +353,12 @@ function renderCFinish(){
 }
 
 function applyMode(){
-  if(!BLIND)return;
-  document.getElementById("topKicker").textContent="INTERACTION STUDY";
-  document.getElementById("topTitle").textContent="Try this short experiment.";
-  document.getElementById("topSub").textContent="Use it however feels natural. There is no correct way to interact.";
+  if(!BLIND){
+    document.getElementById("topKicker").textContent="DAY 20 / MECHANISM STUDY";
+    document.getElementById("topTitle").innerHTML="Behavior is evidence.<br>It is not intention.";
+    document.getElementById("topSub").textContent="Three small experiments about what a system can observe, infer, and change.";
+    return;
+  }
   document.getElementById("tabs").classList.add("hidden");
   document.querySelectorAll(".panel").forEach(x=>x.classList.remove("on"));
   if(["a","b","c"].includes(PROBE))document.getElementById(PROBE).classList.add("on");
