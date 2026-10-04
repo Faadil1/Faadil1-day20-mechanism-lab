@@ -243,11 +243,15 @@ d4_runtime_fidelity_v1:
   tests: PASS_5_OF_5
   typecheck: PASS
   build: PASS
+  ci_run: 37235565466
+  tests: PASS_5_OF_5
+  typecheck: PASS
+  build: PASS
   human_live_visual_review: PENDING
   concept_lock_effect: NONE
 
 d4_runtime_fidelity_v2:
-  status: IMPLEMENTED_RUNTIME_REVIEW_PENDING
+  status: IMPLEMENTED_CI_GREEN_RUNTIME_REVIEW_PENDING
   branch: design/d4-runtime-fidelity-v2
   receipt: design/D4-RUNTIME-FIDELITY-V2.md
   canonical_model_changed: false
