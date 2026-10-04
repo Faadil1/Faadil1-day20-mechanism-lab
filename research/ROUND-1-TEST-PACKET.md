@@ -1,6 +1,6 @@
 # Day 20 — External Blind Test Round 1
 
-Status: **READY TO RUN**  
+Status: **PAUSED — WAITING FOR v0.2 RUNTIME VERIFICATION**  
 Gate: `COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1`
 
 ## Rule
@@ -29,12 +29,12 @@ This is an initial balanced round, **not a fixed sample-size rule**.
 
 | Participant | Probe | Link |
 |---|---|---|
-| P01 | A | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=a |
-| P02 | B | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=b |
-| P03 | C | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=c |
-| P04 | A | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=a |
-| P05 | B | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=b |
-| P06 | C | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=c |
+| P01 | A | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=a&pid=P01 |
+| P02 | B | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=b&pid=P02 |
+| P03 | C | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=c&pid=P03 |
+| P04 | A | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=a&pid=P04 |
+| P05 | B | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=b&pid=P05 |
+| P06 | C | https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=c&pid=P06 |
 
 If evidence is contradictory or too weak after P06, continue cyclically A → B → C. Do not stop merely because six participants were reached.
 
@@ -126,3 +126,13 @@ Then:
 2. kill or repair weak mechanisms;
 3. re-run collision research on survivors;
 4. only then review Concept Lock.
+
+
+## v0.2 hold
+
+Do not send the old deployment-specific URL to participants until the v0.2 Cloudflare preview is verified.
+
+Surface repair receipt:
+`research/SURFACE-LEGIBILITY-REPAIR-2026-10-04.md`
+
+When the new preview URL is verified, replace the URL base in this packet before starting P01.
