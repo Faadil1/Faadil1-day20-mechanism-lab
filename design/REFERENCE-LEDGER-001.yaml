@@ -1,0 +1,107 @@
+version: 1.0.0
+project: DAY20_MECHANISM_LAB
+date: 2026-10-04
+status: ACTIVE
+gate: TRACE_DISTINCTIVENESS_DIVERGENCE__VISUAL_ARTIFACTS_001
+
+references:
+  - id: DAY20_VISREF_SAN_RITA
+    source: https://sanrita.ca/en
+    source_class: LIVE_CREATIVE_STUDIO_SITE
+    inspection: PRIMARY_LIVE_SITE_PLUS_CODROPS_TECHNICAL_CASE_STUDY
+    observed_signal: navigable_topographic_terrain_replaces_conventional_portfolio_grid
+    influence_role: spatial_navigation
+    transferable_principle: make_the_environment_itself_the_navigation_surface
+    do_not_copy:
+      - wilderness_brand_identity
+      - vintage_national_park_visual_language
+      - terrain_assets
+    proposed_application: information_world_whose_topology_is_changed_by_user_behavior
+    epistemic_status: OBSERVED
+    decision: ADOPT_PRINCIPLE_ONLY
+
+  - id: DAY20_VISREF_COSMIC_HUNT
+    source: https://cosmichunt.sadiecoles.com/
+    source_class: ARTIST_INTERACTIVE_MAP
+    inspection: PRIMARY_LIVE_SITE_AND_GALLERY_DESCRIPTION
+    observed_signal: annotated_constellation_map_acts_as_portal_into_narrative_chapters
+    influence_role: spatial_narrative_index
+    transferable_principle: labeled_spatial_relationships_can_carry_story_without_dashboard_chrome
+    do_not_copy:
+      - wolf_constellation
+      - artist_identity
+      - drawing_style
+    proposed_application: causal_landmarks_and_paths_as_story_objects
+    epistemic_status: OBSERVED
+    decision: ADOPT_PRINCIPLE_ONLY
+
+  - id: DAY20_VISREF_LAND_LINES
+    source: https://lines.chromeexperiments.com/
+    source_class: INTERACTIVE_WEB_EXPERIMENT
+    inspection: PRIMARY_LIVE_EXPERIMENT_PLUS_GOOGLE_EXPERIMENTS_DESCRIPTION
+    observed_signal: direct_gesture_immediately_changes_visual_traversal_and_discovery
+    influence_role: interaction_signature
+    transferable_principle: user_action_should_have_immediate_world_level_visual_consequence
+    do_not_copy:
+      - satellite_imagery
+      - draw_drag_mechanic
+      - Google_visual_identity
+    proposed_application: visible_field_or_terrain_deformation_from_session_signals
+    epistemic_status: OBSERVED
+    decision: ADOPT_PRINCIPLE_ONLY
+
+  - id: DAY20_VISREF_PLANETARY_COMPENDIUM
+    source: https://archive.aec.at/prix/320414/
+    source_class: INTERACTIVE_KNOWLEDGE_ATLAS
+    inspection: ARS_ELECTRONICA_ARCHIVE_AND_2026_JURY_STATEMENT
+    observed_signal: connected_case_studies_form_a_living_atlas_rather_than_linear_catalog
+    influence_role: knowledge_world_composition
+    transferable_principle: rich_objects_and_relationships_can_coexist_as_explorable_field
+    do_not_copy:
+      - circular_case_study_cards
+      - planetary_governance_content
+      - exact_network_layout
+    proposed_application: content_bodies_as_explorable_territories_with_changing_adjacency
+    epistemic_status: OBSERVED
+    decision: WATCH_FOR_D4
+
+  - id: DAY20_TRACE_INTERNAL
+    source: Faadil1/trace-design-workflow@main
+    source_class: INTERNAL_DESIGN_ASSURANCE
+    inspection: CURRENT_HANDOVER_CREATIVE_DEVICE_CREATIVE_PROTOCOL_TOOL_SELECTION
+    observed_signal: mechanism_first_multi_direction_visual_evidence_device_matrix_anti_slop
+    influence_role: process_and_quality_contract
+    transferable_principle: maximize_open_creativity_without_breaking_product_truth
+    proposed_application: all_visual_direction_work
+    epistemic_status: OBSERVED
+    decision: ADOPT
+
+tool_candidates:
+  threejs:
+    status: PRIMARY_VERIFIED
+    role: spatial_renderer
+    license: MIT
+  react_three_fiber:
+    status: PRIMARY_VERIFIED
+    role: react_renderer_for_threejs
+    license: MIT
+  d3_force:
+    status: PRIMARY_VERIFIED
+    role: real_force_layout_and_state_dynamics
+    license: ISC
+  motion:
+    status: PRIMARY_VERIFIED
+    role: DOM_UI_layout_and_reveal_motion
+    license: MIT
+  mobbin:
+    status: UNAVAILABLE
+    reason: MCP_REQUIRES_PAID_PLAN
+
+anti_slop:
+  forbidden_defaults:
+    - generic_dark_AI_graph
+    - floating_glass_cards
+    - arbitrary_neon
+    - generic_node_network
+    - card_grid_with_decorative_3D_background
+    - copy_of_reference_brand_language
