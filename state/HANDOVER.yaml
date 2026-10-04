@@ -32,7 +32,7 @@ handover:
     - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
+    id: TRACE_DISTINCTIVENESS_DIVERGENCE__VISUAL_ARTIFACTS_001
     owner: pbpd
     protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
@@ -40,8 +40,8 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Execute research/ROUND-1-TEST-PACKET.md on the verified 26ca31b8 Cloudflare preview. One blind probe per
-      participant; capture Q1-Q7 before explaining the thesis.
+      Produce comparative desktop and mobile visual artifacts for D1-D4 in design/DISTINCTIVENESS-ESCALATION-001.md.
+      Preserve product truth and compare distinctiveness/product utility/visual quality/device usability before human selection.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
