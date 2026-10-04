@@ -168,10 +168,6 @@ export default function App() {
         </nav>
       )}
 
-      {world.stage !== 'enter' && world.stage !== 'reveal' && (
-        <div className="fidelity-note">world state is changing from observed behavior</div>
-      )}
-
       {world.stage === 'reveal' && (
         <motion.aside
           className="reveal-panel"
