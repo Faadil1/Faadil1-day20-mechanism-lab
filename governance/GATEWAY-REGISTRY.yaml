@@ -111,10 +111,15 @@ registry:
       status: BLOCKED
       note: exact_Cloudflare_deployment_to_Git_commit_binding_not_independently_proven
 
+    BLIND_SURFACE_LEGIBILITY_REPAIR:
+      status: ACTIVE
+      note: v0_2_code_repaired_from_operator_recording_static_checks_pass_runtime_verification_pending
+      evidence: research/SURFACE-LEGIBILITY-REPAIR-2026-10-04.md
+
     EXTERNAL_USER_EVIDENCE:
-      status: PENDING
-      note: exact_next_gate
-      evidence: BLIND-TEST-SCRIPT.md
+      status: BLOCKED
+      note: temporarily_blocked_until_v0_2_Cloudflare_preview_is_verified
+      evidence: research/ROUND-1-TEST-PACKET.md
 
     REFERENCE_INTELLIGENCE:
       status: ACTIVE
