@@ -36,8 +36,9 @@ button:focus-visible { outline: 2px solid var(--vermilion); outline-offset: 3px;
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(3,4,6,.38), transparent 24%, transparent 72%, rgba(3,4,6,.24)),
-    radial-gradient(circle at 50% 48%, transparent 34%, rgba(0,0,0,.46) 100%);
+    linear-gradient(90deg, rgba(3,4,6,.26), transparent 18%, transparent 78%, rgba(3,4,6,.2)),
+    linear-gradient(0deg, rgba(4,5,8,.42), transparent 20%, transparent 82%, rgba(4,5,8,.22)),
+    radial-gradient(circle at 50% 50%, transparent 42%, rgba(0,0,0,.46) 100%);
 }
 
 .topline {
@@ -151,7 +152,7 @@ blockquote {
 .return-copy {
   position: absolute;
   z-index: 10;
-  top: 14vh;
+  top: 10vh;
   left: 50%;
   transform: translateX(-50%);
   width: min(820px, calc(100vw - 40px));
@@ -161,8 +162,10 @@ blockquote {
 }
 .return-copy h2 {
   margin: 7px 0 6px;
-  font-size: clamp(62px, 8vw, 126px);
-  line-height: .82;
+  font-size: clamp(50px, 6.5vw, 104px);
+  line-height: .84;
+  max-width: 9ch;
+  margin-inline: auto;
 }
 .return-copy p {
   margin: 0;
@@ -194,18 +197,25 @@ blockquote {
 .landmark-list {
   position: absolute;
   z-index: 7;
-  right: 26px;
-  bottom: 26px;
+  right: 24px;
+  bottom: 24px;
   display: grid;
-  width: 190px;
-  max-height: 39vh;
+  width: 176px;
+  max-height: 36vh;
   overflow: auto;
   padding: 4px 0;
-  border-top: 1px solid rgba(190,164,107,.34);
-  background: linear-gradient(180deg, rgba(9,11,16,.18), rgba(9,11,16,.5));
-  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(190,164,107,.22);
+  background: rgba(9,11,16,.2);
+  backdrop-filter: blur(6px);
   scrollbar-width: thin;
-  scrollbar-color: rgba(190,164,107,.34) transparent;
+  scrollbar-color: rgba(190,164,107,.25) transparent;
+  opacity: .3;
+  transition: opacity .28s ease, background .28s ease;
+}
+.landmark-list:hover,
+.landmark-list:focus-within {
+  opacity: 1;
+  background: rgba(9,11,16,.58);
 }
 .landmark-list::before {
   content: "ATLAS INDEX";
@@ -377,8 +387,8 @@ blockquote {
   }
   .stage-copy h2 { font-size: 42px; }
 
-  .return-copy { top: 20vh; }
-  .return-copy h2 { font-size: 58px; }
+  .return-copy { top: 14vh; }
+  .return-copy h2 { font-size: 50px; }
 
   .detail-panel {
     left: 14px;
@@ -418,4 +428,18 @@ blockquote {
     transition-duration: .01ms !important;
     animation-duration: .01ms !important;
   }
+}
+
+
+.fidelity-note {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 6;
+  color: rgba(226,213,188,.48);
+  font-size: 8px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  pointer-events: none;
 }
