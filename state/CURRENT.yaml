@@ -10,10 +10,11 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: BLIND_SURFACE_LEGIBILITY_REPAIR__RUNTIME_VERIFY_V0_2
+  exact_next_gate: COMPARATIVE_MECHANISM_PROOF__EXTERNAL_BLIND_TEST_ROUND_1
   exact_next_action: >-
-    Wait for Cloudflare Pages to deploy the v0.2 branch head, obtain the new preview URL, verify neutral blind
-    routes A/B/C and the repaired interactions, then update the Round 1 packet to the verified URL before P01.
+    Execute research/ROUND-1-TEST-PACKET.md on the verified v0.2 preview: one blind probe per participant,
+    start with balanced P01-P06 assignment, record Q1-Q7 verbatim before any thesis explanation, and continue
+    beyond P06 only while evidence is contradictory or insufficient.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -122,18 +123,19 @@ cloudflare_pages:
   project: faadil1-day20-mechanism-lab
   production_branch: main
   preview_branch: preconcept/comparative-mechanism-proof
-  preview_url: https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/
+  preview_url: https://26ca31b8.faadil1-day20-mechanism-lab.pages.dev/
   content_verification: VERIFIED
   blind_routes:
     - https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=a
     - https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=b
     - https://e037fb87.faadil1-day20-mechanism-lab.pages.dev/?blind=1&probe=c
-  exact_commit_binding: BLOCKED_NO_CLOUDFLARE_SHA_RECEIPT
+  exact_commit_binding: PROVEN
   deployment_state: PREVIEW
+  deployment_identity: 26ca31b8
+  deployment_commit: ca20606f22c954b0559ccbe3381f509b3fcfca07
 
 blockers:
   - EXTERNAL_USER_EVIDENCE_NOT_YET_OBSERVED
-  - RUNTIME_COMMIT_BINDING_NOT_PROVEN
   - CONCEPT_LOCK_REQUIRES_COMPARATIVE_MECHANISM_EVIDENCE
   - SURVIVING_MECHANISM_REQUIRES_RENEWED_COLLISION_CHECK_BEFORE_LOCK
 
@@ -146,9 +148,9 @@ round_1_external_blind_test:
   first_result_status: PENDING
 
 surface_legibility_repair:
-  status: ACTIVE_AWAITING_RUNTIME_VERIFICATION
+  status: PROVEN_RUNTIME_VERIFIED
   trigger: OPERATOR_SCREEN_RECORDING_REVIEW
   receipt: research/SURFACE-LEGIBILITY-REPAIR-2026-10-04.md
   code_commit: e96cbd86a87b491007ba40d60a1c7424729caec3
   static_verification: PROVEN
-  external_round_1: PAUSED
+  external_round_1: READY_TO_RUN
