@@ -1,7 +1,7 @@
 # D4 Runtime Fidelity V2 — World Scale & Monumentality
 
 Date: 2026-10-04
-Status: **IMPLEMENTED / RUNTIME REVIEW PENDING**
+Status: **IMPLEMENTED / CI GREEN / RUNTIME REVIEW PENDING**
 
 ## Trigger
 
@@ -155,3 +155,20 @@ Human review should answer:
 8. Does mobile remain usable?
 
 If any of 1–4 are still materially weak, V2 is **REVISE**, not “good enough.”
+
+
+## CI verification
+
+GitHub Actions run:
+`37235565466`
+
+Head:
+`f3080a122adae38621b673023591ad318d9753a2`
+
+Result:
+- install: PASS
+- deterministic model tests: PASS 5/5
+- TypeScript typecheck: PASS
+- Vite production build: PASS
+
+This proves build integrity only. It does not prove visual quality or live-browser performance.
