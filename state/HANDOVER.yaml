@@ -32,7 +32,7 @@ handover:
     - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: D4_CODED_SPATIAL_VERTICAL_SLICE_001
+    id: D4_CODED_SPATIAL_VERTICAL_SLICE_001__RUNTIME_PREVIEW
     owner: pbpd
     protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
@@ -40,8 +40,8 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Build the first real interactive D4 spatial vertical slice from the approved desktop/mobile/motion system.
-      Use one canonical deterministic world state; the render layer must not become the source of truth.
+      Deploy the green D4 Vite build as a non-production preview bound to commit
+      945ba686f766100842d0bb8dae56daf33746e13e and verify the full spatial core loop on desktop/mobile/reduced-motion.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
