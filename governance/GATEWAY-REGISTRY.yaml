@@ -246,3 +246,16 @@ registry:
         - design/D4-RUNTIME-FIDELITY-V2.md
         - design/D4-HUMAN-VISUAL-APPROVAL-2026-10-04.md
         - design/D4-MOBILE-VISUAL-APPROVAL-2026-10-04.md
+
+    D4_RUNTIME_FIDELITY_V2_REVIEW:
+      status: PROVEN
+      verdict: REVISE
+      note: human_live_review_found_material_experience_layers_missing_despite_visual_improvement
+      evidence: design/D4-V3-EXPERIENCE-ARCHITECTURE-GAP-AUDIT.md
+
+    D4_V3_SPATIAL_EXPERIENCE_FOUNDATION:
+      status: ACTIVE
+      note: exact_next_gate_real_traversal_mutable_topology_authored_asset_pipeline_and_snapshot_replay
+      evidence:
+        - design/D4-V3-EXPERIENCE-ARCHITECTURE-GAP-AUDIT.md
+        - design/D4-V3-SPATIAL-FOUNDATION-BLUEPRINT.md
