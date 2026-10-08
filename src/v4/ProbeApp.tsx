@@ -4,7 +4,7 @@ import {
   chooseArtifact, decideEnding, exportReceipt, newJourney,
   routeChanged, setRevealIndex, startJourney, submitReflection, travel,
   type Edge, type NodeId, type Probe, type Snapshot,
-} from './v4/engine'
+} from './engine'
 
 const nodeLookup = Object.fromEntries(NODES.map(n => [n.id, n])) as Record<NodeId, (typeof NODES)[number]>
 const startingProbe: Probe = new URLSearchParams(window.location.search).get('probe') === 'route' ? 'route' : 'strata'
