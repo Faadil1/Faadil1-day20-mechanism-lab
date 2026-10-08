@@ -276,3 +276,26 @@ registry:
       evidence:
         - research/REFERENCE-INTELLIGENCE.yaml
         - research/SUBSTACK-EDITORIAL-SOURCE-INTAKE-2026-10-08.md
+
+    D4_V4_PAIRED_PROBE_IMPLEMENTATION:
+      status: PROVEN
+      note: both_svg_conditions_share_same_deterministic_graph_real_travel_observations_mutations_snapshots_and_explicit_recovery
+      evidence:
+        - src/v4/engine.ts
+        - src/v4/ProbeApp.tsx
+        - src/v4/engine.test.ts
+
+    D4_V4_BUILD_QUALITY:
+      status: PROVEN
+      note: github_actions_37783304911_passed_15_tests_typecheck_and_build_on_tested_commit
+      evidence: governance/V4-EVIDENCE-GRAPH.yaml
+
+    D4_V4_LIVE_BROWSER_VALIDATION:
+      status: ACTIVE
+      note: condition_A_browser_load_Deep_Time_Index_first_choice_REV_01_observed; second_choice_return_reveal_condition_B_mobile_keyboard_and_commit_binding_remain_unproven
+      evidence: governance/V4-EVIDENCE-GRAPH.yaml
+
+    D4_V4_EXTERNAL_BLIND_COMPREHENSION:
+      status: BLOCKED
+      note: requires_real_browser_verified_probes_and_independent_participant_observations
+      evidence: research/V4-EXPERIENTIAL-KILL-TEST-PACKET.md

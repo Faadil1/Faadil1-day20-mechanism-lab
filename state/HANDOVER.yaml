@@ -1,7 +1,7 @@
 handover:
   date: 2026-10-08
   repository: Faadil1/Faadil1-day20-mechanism-lab
-  branch: design/v4-sediment-atlas-buried-path
+  branch: build/v4-buried-path-kill-test
   status: ACTIVE_PRE_CONCEPT_RECONCILED
   current_owner: pbpd
 
@@ -34,16 +34,17 @@ handover:
   exact_next_gate:
     id: D4_V4_BURIED_PATH__EXPERIENTIAL_KILL_TEST
     owner: pbpd
-    protocol: research/ROUND-1-TEST-PACKET.md
+    protocol: research/V4-EXPERIENTIAL-KILL-TEST-PACKET.md
     candidates:
       - A_RETROSPECTIVE_MISMATCH
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Implement and compare two bounded, real-use, browser-operable mechanism probes: excavatable
-      sedimentary terrain versus non-geological traceable route. Use the same deterministic model and
-      cultural artifact corpus, then test non-coached cause/consequence/unknown comprehension.
-      Preserve PR #6 as Draft; do not produce high-cost 3D until this gate survives.
+      Video evidence confirms only V4 condition A loads, reaches Deep Time, opens The Index and
+      applies a first logged specimen choice (REV 01). Complete A through changed return, reflection,
+      snapshot reveal and RESTORE/KEEP; run B with ?probe=route, then mobile, keyboard, no-WebGL,
+      negative/recovery and exact Cloudflare commit binding. After both complete browser loops,
+      run the predeclared independent pilot. No merge or Concept Lock.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
@@ -75,3 +76,24 @@ handover:
     substack_source_packet: research/SUBSTACK-EDITORIAL-SOURCE-INTAKE-2026-10-08.md
     source_authority: NONE
     historical_V3_receipts_preserved: true
+
+  v4_implementation:
+    branch: build/v4-buried-path-kill-test
+    pr: 8
+    engine: src/v4/engine.ts
+    app: src/v4/ProbeApp.tsx
+    local_ci: PASS_15_TESTS_TYPECHECK_BUILD
+    runtime: PENDING
+    independent_blind_study: PENDING
+    evidence_graph: governance/V4-EVIDENCE-GRAPH.yaml
+    no_merge: true
+
+  v4_operator_video_review:
+    observed_on: 2026-10-08
+    deployment_url: https://963c5283.faadil1-day20-d4-preview.pages.dev/
+    status: PARTIAL
+    source: evidence/V4-OPERATOR-VIDEO-PARTIAL-LIVE-2026-10-08.md
+    first_causal_mutation: OBSERVED
+    second_choice_return_reveal_recovery: UNKNOWN
+    condition_B: UNKNOWN
+    exact_deployed_commit: UNKNOWN

@@ -1,0 +1,93 @@
+version: 1.0.0
+project: DAY20_MECHANISM_LAB
+scope: V4_BURIED_PATH_EXPERIENTIAL_KILL_TEST
+created_at: 2026-10-08
+status: PARTIAL
+central_evidence_graph: governance/EVIDENCE-GRAPH.yaml
+central_graph_note: >-
+  Existing project graph has historical duplicate top-level keys; preserve it until a
+  separate coherence repair rather than silently rewriting historical receipts. This
+  bounded V4 claim graph is schema-isolated and does not override historic claims.
+
+claims:
+  - id: DAY20_V4_BUILD_INTEGRITY
+    statement: The paired V4 research surfaces compile and deterministic tests pass.
+    graph_status: COMPLETE
+    evidence_class: LOCAL_BUILD
+    scenario: V4_ENGINE_REGRESSION
+    runtime_execution: GITHUB_ACTIONS_37783304911
+    dependency: GITHUB_ACTIONS_NODE22_NPM
+    receipt: GITHUB_ACTIONS_JOB_37783304911
+    commit: 6ad200ab42d49872a1c42cc9f5639f0533829838
+    deployment: null
+    observed: TESTS_15_TYPECHECK_BUILD_PASS
+    note: Later continuity commits must pass CI as well; the tested code commit is fixed.
+
+  - id: DAY20_V4_BROWSER_RUNTIME
+    statement: Both V4 conditions complete the full journey in a real browser.
+    graph_status: PARTIAL
+    evidence_class: LIVE_STAGING_OPERATOR_VIDEO
+    scenario: V4_BROWSER_FULL_LOOP_BOTH_CONDITIONS
+    runtime_execution: OPERATOR_VIDEO_2026_10_08
+    dependency: CLOUDFLARE_PAGES_PREVIEW
+    receipt: evidence/V4-OPERATOR-VIDEO-PARTIAL-LIVE-2026-10-08.md
+    commit: null
+    deployment: https://963c5283.faadil1-day20-d4-preview.pages.dev/
+    observed: CONDITION_A_LOAD_ENTER_TRAVEL_DEEP_TIME_INDEX_ONE_DECISION_REV_01
+    note: Deployment to Git commit link, full loop and condition B remain unproven.
+
+  - id: DAY20_V4_EXTERNAL_COMPREHENSION
+    statement: Uncoached participants understand behavior to model consequence while recognizing intention is not known.
+    graph_status: MISSING
+    evidence_class: UNKNOWN
+    scenario: V4_INDEPENDENT_BLIND_PILOT
+    runtime_execution: null
+    dependency: HUMAN_CONSENTED_EXTERNAL_TRIAL
+    receipt: null
+    commit: null
+    deployment: null
+
+  - id: DAY20_V4_NO_WEBGL_ARCHITECTURE
+    statement: Probe app renders and navigates without constructing a WebGL context.
+    graph_status: PARTIAL
+    evidence_class: SOURCE_INSPECTION
+    scenario: V4_WEBGL_DISABLED_BROWSER
+    runtime_execution: null
+    dependency: REACT_SVG_DOM
+    receipt: src/v4/ProbeApp.tsx
+    commit: 6ad200ab42d49872a1c42cc9f5639f0533829838
+    deployment: null
+    note: Static code uses SVG and does not import R3F; browser test still required.
+
+scenarios:
+  - id: V4_ENGINE_REGRESSION
+    type: SUCCESS_BOUNDARY_RECOVERY
+    result: PASS
+    tests: 15
+    suite: [src/world.test.ts, src/v4/engine.test.ts]
+
+  - id: V4_BROWSER_FULL_LOOP_BOTH_CONDITIONS
+    type: SUCCESS_NEGATIVE_RECOVERY
+    result: PARTIAL_CONDITION_A_ONLY
+    success: [first_route_to_deep_time, two_distinct_specimen_decisions, changed_path, return, reflection, replay, restore_or_keep, local_receipt]
+    failure: [blocked_passage, disconnected_click_rejected, missing_clipboard_permission]
+    accessibility: [keyboard, 390px_mobile, reduced_motion]
+
+  - id: V4_WEBGL_DISABLED_BROWSER
+    type: DEPENDENCY_FAILURE
+    result: PENDING
+    success: same_full_journey_without_WebGL
+
+  - id: V4_INDEPENDENT_BLIND_PILOT
+    type: EXTERNAL_USER
+    result: NOT_YET_RUN
+    protocol: research/V4-EXPERIENTIAL-KILL-TEST-PACKET.md
+
+unresolved_edges:
+  - V4_BROWSER_RUNTIME_partial_operator_video_only_without_full_loop_or_condition_B
+  - V4_DEPLOYMENT_HASH_VISIBLE_but_exact_commit_binding_not_verified
+  - V4_EXTERNAL_COMPREHENSION_has_no_consented_user_trial
+  - V4_NO_WEBGL_BROWSER_case_not_yet_observed
+  - V4_CLOUDFLARE_COMMIT_BINDING_missing
+
+terminal_claims_allowed: false
