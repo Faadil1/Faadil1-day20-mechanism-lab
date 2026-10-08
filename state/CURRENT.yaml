@@ -12,10 +12,10 @@ project:
   current_owner: pbpd
   exact_next_gate: D4_V4_BURIED_PATH__EXPERIENTIAL_KILL_TEST
   exact_next_action: >-
-    Obtain a Cloudflare Pages branch preview for build/v4-buried-path-kill-test, bind its URL to the exact
-    deployed Git commit, then complete both ?probe=strata and ?probe=route flows on desktop/mobile and
-    without WebGL. After runtime verification, run the predeclared independent uncoached pilot in
-    research/V4-EXPERIENTIAL-KILL-TEST-PACKET.md. Do not promote Concept Lock from CI alone.
+    Continue the observed V4 Cloudflare condition A after the first real choice, verify the second distinct
+    choice and changed Deep Time return route, pre-reveal neutral answers, historical snapshot reveal and
+    RESTORE/KEEP. Independently run condition B (?probe=route), mobile, keyboard and no-WebGL paths;
+    bind deployment 963c5283 to an exact commit before external uncoached pilot or Concept Lock.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -300,7 +300,7 @@ substack_editorial_intake:
   global_rule_change: NO_CHANGE
 
 v4_experiential_kill_test_execution:
-  status: IMPLEMENTED_CI_GREEN_LIVE_REVIEW_PENDING
+  status: IMPLEMENTED_CI_GREEN_OPERATOR_VIDEO_PARTIAL
   implementation_branch: build/v4-buried-path-kill-test
   pr: 8
   entry_app: src/v4/ProbeApp.tsx
@@ -312,8 +312,12 @@ v4_experiential_kill_test_execution:
   tests: PASS_15_OF_15
   typecheck: PASS
   build: PASS
-  deployment_url: UNKNOWN
-  browser_full_loop: UNKNOWN
+  deployment_url: https://963c5283.faadil1-day20-d4-preview.pages.dev/
+  deployment_commit_binding: UNKNOWN
+  operator_video_receipt: evidence/V4-OPERATOR-VIDEO-PARTIAL-LIVE-2026-10-08.md
+  condition_A_first_route_and_first_mutation: OBSERVED
+  condition_B_runtime: UNKNOWN
+  browser_full_loop: PARTIAL
   mobile_browser: UNKNOWN
   webgl_disabled_browser: UNKNOWN
   external_participant_comprehension: MISSING
