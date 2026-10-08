@@ -6,6 +6,7 @@ on:
       - build/d4-spatial-vertical-slice
       - design/d4-runtime-fidelity-v1
       - design/d4-runtime-fidelity-v2
+      - build/v4-buried-path-kill-test
   pull_request:
     branches:
       - preconcept/comparative-mechanism-proof
