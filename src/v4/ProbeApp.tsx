@@ -34,7 +34,8 @@ function Atlas({ world, probe, current, onGo, interactive }: {
             <path d="M0 0H860V440H0Z" fill="url(#earth)"/>
             {Array.from({ length: 8 }, (_, i) => {
               const z = i * 45 + 20
-              const depth = Math.min(34, world.revision * (i % 3 === 0 ? 8 : 4))
+              const edgeDeposit = Object.values(world.edges)[i % Object.values(world.edges).length]?.deposit ?? 0
+              const depth = Math.min(34, edgeDeposit * 26)
               return <path key={i} d={`M0 ${z + 25} C170 ${z - 19 - depth}, 340 ${z + 61 + depth}, 510 ${z + 12} S760 ${z + 40 - depth},860 ${z + 20}L860 ${z + 35}C690 ${z + 65},500 ${z + 15 + depth},300 ${z + 57} S80 ${z + 28},0 ${z + 44}Z`} fill={['#b16c58','#a05c4f','#dda77b','#794a4d','#c18365','#713b43','#e0b184','#613441'][i]} fillOpacity=".67" stroke="#e9af80" strokeOpacity=".27" strokeWidth="1"/>
             })}
             <path d="M0 410L125 376 230 419 380 383 480 440H0Z" fill="#2a1a24" opacity=".78"/>
@@ -93,7 +94,7 @@ export default function App() {
   const visibleWorld = phase === 'reveal' && activeReceipt ? (showBefore ? activeReceipt.before : activeReceipt.after) : journey.world
   const available = connectedEdges(journey.world, journey.current)
   const stageText: Record<string,string> = {
-    entry: 'Every route leaves something behind.',
+    entry: 'A passage into the archive.',
     seek: 'First, find the archive.',
     explore: 'Discover two fragments.',
     return: 'Return to Deep Time.',
@@ -145,7 +146,7 @@ export default function App() {
       </section>
       <div className="v4-landscape">
         <Atlas world={visibleWorld} probe={journey.probe} current={journey.current} onGo={go} interactive={isNavigating}/>
-        {phase === 'entry' && <div className="v4-entry-overlay"><div className="v4-entry-content"><div className="v4-meta">AN ORIGINAL EXPERIMENT / NO WEBGL REQUIRED</div><h2>What changes when you follow a trail?</h2><p>Travel to an archive, discover fragments, and find your way back. No account. Study responses are not uploaded.</p><button className="v4-primary" onClick={() => setJourney(startJourney)}>Begin journey <span aria-hidden="true">↗</span></button></div></div>}
+        {phase === 'entry' && <div className="v4-entry-overlay"><div className="v4-entry-content"><div className="v4-meta">AN ORIGINAL EXPERIMENT / NO WEBGL REQUIRED</div><h2>Follow a trail into the archive.</h2><p>Travel to an archive, discover fragments, and find your way back. No account. Study responses are not uploaded.</p><button className="v4-primary" onClick={() => setJourney(startJourney)}>Begin journey <span aria-hidden="true">↗</span></button></div></div>}
       </div>
 
       <div className="v4-bottom">
@@ -187,7 +188,7 @@ export default function App() {
               {([
                 ['changed','What, if anything, changed during your journey?'],
                 ['cause','What do you think caused those changes?'],
-                ['meaning','What could the system actually know about why you acted?'],
+                ['meaning','What information, if any, do you think the experience used?'],
                 ['benefit','Did the change help you, hinder you, or both?'],
               ] as [string,string][]).map(([key,label])=><label key={key}>{label}<textarea value={answers[key] ?? ''} onChange={e=>setAnswers(v=>({...v,[key]:e.target.value}))} rows={2} placeholder="Your own words (optional)"/></label>)}
               <button type="submit" className="v4-primary">Continue to the record →</button>
