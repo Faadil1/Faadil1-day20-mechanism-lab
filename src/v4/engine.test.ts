@@ -84,8 +84,21 @@ describe('V4 paired experiential probe — canonical causal engine', () => {
     expect(s.stage).toBe('return')
     expect(Object.keys(s.choices)).toHaveLength(2)
     expect(routeChanged(s)).toBe(true)
+    expect(s.world.edges['a-d'].available).toBe(false)
     expect(isReachable(s.world,s.current,'deep-time')).toBe(true)
     expect(s.receipts).toHaveLength(2)
+  })
+
+  it('can preserve the originally chosen route when the observed choices reinforce it', () => {
+    let s=toExplore()
+    s=move(s,'a-d')
+    s=chooseArtifact(s,'arcade','KEEP')
+    s=move(s,'a-s')
+    s=chooseArtifact(s,'signal','KEEP')
+    expect(s.stage).toBe('return')
+    expect(s.world.edges['a-d'].available).toBe(true)
+    expect(s.world.edges['a-d'].cost).toBeLessThan(1.01)
+    expect(isReachable(s.world,s.current,'deep-time')).toBe(true)
   })
 
   it('allows successful return and asks for uncoached reflection before the receipt reveal', () => {
