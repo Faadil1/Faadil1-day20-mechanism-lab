@@ -35,6 +35,7 @@ export interface Journey {
   visited: NodeId[]
   firstRoute: EdgeId[]
   traveled: EdgeId[]
+  travelCost: number
   choices: Partial<Record<NodeId, Choice>>
   receipts: Receipt[]
   world: Snapshot
@@ -80,7 +81,7 @@ const alternateFor = (id: NodeId): EdgeId => id === 'arcade' ? 'g-d' : id === 'g
 
 export const newJourney = (probe: Probe): Journey => ({
   probe, stage: 'entry', current: 'threshold', visited: ['threshold'],
-  firstRoute: [], traveled: [], choices: {}, receipts: [],
+  firstRoute: [], traveled: [], travelCost: 0, choices: {}, receipts: [],
   world: { revision: 0, edges: byId(EDGES.map(e => ({ ...e }))) },
   revealedIndex: 0, finalChoice: null,
 })
@@ -118,7 +119,7 @@ export function travel(state: Journey, edgeId: EdgeId): Journey {
   return {
     ...state, current: target, stage, visited,
     firstRoute: state.stage === 'seek' ? [...state.firstRoute, edgeId] : state.firstRoute,
-    traveled: [...state.traveled, edgeId],
+    traveled: [...state.traveled, edgeId], travelCost: safe(state.travelCost + edge.cost),
   }
 }
 
@@ -138,6 +139,7 @@ function mutate(state: Journey, signal: Signal, at: NodeId, make: (world: Snapsh
 
 export function chooseArtifact(state: Journey, artifactId: NodeId, choice: Choice): Journey {
   if (state.stage !== 'explore' || state.current !== artifactId || !['arcade', 'gallery', 'signal'].includes(artifactId) || state.choices[artifactId]) return state
+  const isSecondDistinctChoice = Object.keys(state.choices).length === 1
   let next = mutate(state, choice, artifactId, world => {
     const primary = world.edges[routeFor(artifactId)]
     const alternative = world.edges[alternateFor(artifactId)]
@@ -156,13 +158,24 @@ export function chooseArtifact(state: Journey, artifactId: NodeId, choice: Choic
       edge.visibility = safe(Math.max(0.18, 1 - edge.deposit * 0.32))
       if (edge.cost > 2.6 && ['a-d', 'g-d', 's-d'].includes(edge.id)) edge.available = false
     }
-    // A rule may never strand the archive; prefer a traversable path over a dramatic but broken one.
-    if (!isReachable(world, artifactId, 'deep-time')) {
-      for (const edge of Object.values(world.edges)) edge.available = true
+    // After enough independent observations, the least-promoted main connection can become covered.
+    // This is conditional on actual choices, not an unconditional staged failure.
+    let covered = ''
+    if (isSecondDistinctChoice) {
+      const candidates = [world.edges['a-d'], world.edges['g-d']].filter(e => e.available && e.cost >= 1.8)
+      candidates.sort((a,b) => b.cost - a.cost)
+      if (candidates[0]) {
+        candidates[0].available = false
+        if (isReachable(world, artifactId, 'deep-time') && isReachable(world, 'threshold', 'deep-time')) {
+          covered = ' The least-promoted passage became covered; an alternate route remains open.'
+        } else {
+          candidates[0].available = true
+        }
+      }
     }
-    return choice === 'KEEP'
+    return (choice === 'KEEP'
       ? 'A nearby route was reinforced; another became more costly.'
-      : 'One route grew less prominent; an alternative became easier.'
+      : 'One route grew less prominent; an alternative became easier.') + covered
   })
   const choices = { ...state.choices, [artifactId]: choice }
   const count = Object.keys(choices).length
@@ -197,7 +210,7 @@ export const routeChanged = (state: Journey): boolean => Object.values(state.wor
 export const exportReceipt = (state: Journey, answers: Record<string, string>) => ({
   study_version: 'V4-EXPERIENTIAL-KILL-TEST-001', evidence_class: 'LOCAL_BROWSER_SESSION', condition: state.probe,
   probe_is_not_an_historical_simulation: true, generated_at: new Date().toISOString(),
-  first_route: state.firstRoute, traversed_edges: state.traveled, choices: state.choices,
+  first_route: state.firstRoute, traversed_edges: state.traveled, accumulated_route_cost: state.travelCost, choices: state.choices,
   receipts: state.receipts, answers, final_action: state.finalChoice,
   disclaimer: 'No data were submitted to a server. Behavioral actions cannot prove intention.',
 })
