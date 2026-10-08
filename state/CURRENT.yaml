@@ -1,8 +1,8 @@
 project:
   id: DAY20_MECHANISM_LAB
   repository: Faadil1/Faadil1-day20-mechanism-lab
-  branch: preconcept/comparative-mechanism-proof
-  date: 2026-10-03
+  branch: design/v4-sediment-atlas-buried-path
+  date: 2026-10-08
   source_of_truth: GITHUB
   project_type: RESEARCH_INTERACTIVE_WEB_EXPERIMENT
   project_profile: PRODUCT-REALITY-POLICY.yaml#research_or_prototype
@@ -10,11 +10,12 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: D4_V3_SPATIAL_EXPERIENCE_FOUNDATION_001
+  exact_next_gate: D4_V4_BURIED_PATH__EXPERIENTIAL_KILL_TEST
   exact_next_action: >-
-    Build the V3 load-bearing spatial foundation slice defined in design/D4-V3-SPATIAL-FOUNDATION-BLUEPRINT.md:
-    CENTRAL THRESHOLD → real travel → one bridge → DEEP TIME exterior/interior → behavior observation → mutable route
-    topology → changed return path → true snapshot-based causal replay. Prove this slice before scaling to all territories.
+    Run the bounded comparison in design/D4-V4-BURIED-PATH-EXPERIENTIAL-KILL-TEST.md:
+    implement small usable strata-and-route prototypes on the same deterministic content and state,
+    preserve WebGL-free access and real negative/recovery paths, then test uncoached causal comprehension
+    before any expensive 3D asset production, Concept Lock or V3 continuation.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -275,3 +276,25 @@ d4_v3:
   product_exploitation_loop: ACTIVE
   scale_strategy: PROVE_ONE_LOAD_BEARING_DEEP_TIME_SLICE_THEN_EXPAND
   concept_lock_effect: NONE
+
+v4_sediment_atlas:
+  recorded_at: 2026-10-08
+  status: HUMAN_AUTHORIZED_EXPLORATORY_DIRECTION
+  candidate_mechanism: THE_BURIED_PATH
+  direction: SEDIMENT_ATLAS
+  contract: design/D4-V4-BURIED-PATH-EXPERIENTIAL-KILL-TEST.md
+  external_mechanism_validation: MISSING
+  first_class_fallback: ACTIVE_REQUIREMENT
+  V3_diagnostic_preserved: true
+  V3_implementation_continuation: PAUSED
+  concept_lock_effect: NONE
+  naming_lock_effect: NONE
+
+substack_editorial_intake:
+  recorded_at: 2026-10-08
+  scope: PROJECT_LOCAL_REFERENCE_INTELLIGENCE
+  registry: research/REFERENCE-INTELLIGENCE.yaml
+  packet: research/SUBSTACK-EDITORIAL-SOURCE-INTAKE-2026-10-08.md
+  orbit_publication_identity: VERIFIED
+  screenshot_article_direct_url: UNKNOWN
+  global_rule_change: NO_CHANGE
