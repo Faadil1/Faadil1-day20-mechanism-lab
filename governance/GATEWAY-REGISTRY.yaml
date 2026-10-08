@@ -254,8 +254,25 @@ registry:
       evidence: design/D4-V3-EXPERIENCE-ARCHITECTURE-GAP-AUDIT.md
 
     D4_V3_SPATIAL_EXPERIENCE_FOUNDATION:
-      status: ACTIVE
-      note: exact_next_gate_real_traversal_mutable_topology_authored_asset_pipeline_and_snapshot_replay
+      status: BLOCKED
+      note: implementation_paused_pending_V4_experiential_mechanism_comparison; V3_gap_audit_retained
       evidence:
         - design/D4-V3-EXPERIENCE-ARCHITECTURE-GAP-AUDIT.md
         - design/D4-V3-SPATIAL-FOUNDATION-BLUEPRINT.md
+
+    D4_V4_EXPLORATORY_DIRECTION:
+      status: PROVEN
+      note: human_approved_bounded_exploration_of_Sediment_Atlas_and_The_Buried_Path_on_2026_10_08; not_Concept_Lock
+      evidence: design/D4-V4-BURIED-PATH-EXPERIENTIAL-KILL-TEST.md
+
+    D4_V4_BURIED_PATH_EXPERIENTIAL_KILL_TEST:
+      status: ACTIVE
+      note: same_corpus_browser_operable_comparative_probes_required_before_scale; no_webgl_fallback_is_load_bearing
+      evidence: design/D4-V4-BURIED-PATH-EXPERIENTIAL-KILL-TEST.md
+
+    DAY20_SUBSTACK_EDITORIAL_REFERENCE_INTAKE:
+      status: PROVEN
+      note: publication_and_selected_editorial_articles_registered_project_locally; screenshot_article_exact_url_unverified
+      evidence:
+        - research/REFERENCE-INTELLIGENCE.yaml
+        - research/SUBSTACK-EDITORIAL-SOURCE-INTAKE-2026-10-08.md
