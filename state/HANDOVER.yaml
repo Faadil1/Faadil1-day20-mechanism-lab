@@ -1,7 +1,7 @@
 handover:
-  date: 2026-10-03
+  date: 2026-10-08
   repository: Faadil1/Faadil1-day20-mechanism-lab
-  branch: preconcept/comparative-mechanism-proof
+  branch: design/v4-sediment-atlas-buried-path
   status: ACTIVE_PRE_CONCEPT_RECONCILED
   current_owner: pbpd
 
@@ -32,7 +32,7 @@ handover:
     - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: D4_V3_SPATIAL_EXPERIENCE_FOUNDATION_001
+    id: D4_V4_BURIED_PATH__EXPERIENTIAL_KILL_TEST
     owner: pbpd
     protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
@@ -40,9 +40,10 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Build the Deep Time V3 foundation slice with real travel, mutable topology, one authored asset pipeline,
-      territory interior and snapshot-based causal replay. Do not scale to all territories until this slice passes
-      live visual and interaction review.
+      Implement and compare two bounded, real-use, browser-operable mechanism probes: excavatable
+      sedimentary terrain versus non-geological traceable route. Use the same deterministic model and
+      cultural artifact corpus, then test non-coached cause/consequence/unknown comprehension.
+      Preserve PR #6 as Draft; do not produce high-cost 3D until this gate survives.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
@@ -67,3 +68,10 @@ handover:
     - production_release
     - public_final_brand_lock
     - terminal_completion_claim
+
+  v4_reference_update:
+    contract: design/D4-V4-BURIED-PATH-EXPERIENTIAL-KILL-TEST.md
+    source_registry: research/REFERENCE-INTELLIGENCE.yaml
+    substack_source_packet: research/SUBSTACK-EDITORIAL-SOURCE-INTAKE-2026-10-08.md
+    source_authority: NONE
+    historical_V3_receipts_preserved: true
