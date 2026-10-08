@@ -1,7 +1,7 @@
 project:
   id: DAY20_MECHANISM_LAB
   repository: Faadil1/Faadil1-day20-mechanism-lab
-  branch: design/v4-sediment-atlas-buried-path
+  branch: build/v4-buried-path-kill-test
   date: 2026-10-08
   source_of_truth: GITHUB
   project_type: RESEARCH_INTERACTIVE_WEB_EXPERIMENT
@@ -12,10 +12,10 @@ project:
   current_owner: pbpd
   exact_next_gate: D4_V4_BURIED_PATH__EXPERIENTIAL_KILL_TEST
   exact_next_action: >-
-    Run the bounded comparison in design/D4-V4-BURIED-PATH-EXPERIENTIAL-KILL-TEST.md:
-    implement small usable strata-and-route prototypes on the same deterministic content and state,
-    preserve WebGL-free access and real negative/recovery paths, then test uncoached causal comprehension
-    before any expensive 3D asset production, Concept Lock or V3 continuation.
+    Obtain a Cloudflare Pages branch preview for build/v4-buried-path-kill-test, bind its URL to the exact
+    deployed Git commit, then complete both ?probe=strata and ?probe=route flows on desktop/mobile and
+    without WebGL. After runtime verification, run the predeclared independent uncoached pilot in
+    research/V4-EXPERIENTIAL-KILL-TEST-PACKET.md. Do not promote Concept Lock from CI alone.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -298,3 +298,25 @@ substack_editorial_intake:
   orbit_publication_identity: VERIFIED
   screenshot_article_direct_url: UNKNOWN
   global_rule_change: NO_CHANGE
+
+v4_experiential_kill_test_execution:
+  status: IMPLEMENTED_CI_GREEN_LIVE_REVIEW_PENDING
+  implementation_branch: build/v4-buried-path-kill-test
+  pr: 8
+  entry_app: src/v4/ProbeApp.tsx
+  model: src/v4/engine.ts
+  test_suite: src/v4/engine.test.ts
+  test_protocol: research/V4-EXPERIENTIAL-KILL-TEST-PACKET.md
+  claim_graph: governance/V4-EVIDENCE-GRAPH.yaml
+  ci_run: 37783304911
+  tests: PASS_15_OF_15
+  typecheck: PASS
+  build: PASS
+  deployment_url: UNKNOWN
+  browser_full_loop: UNKNOWN
+  mobile_browser: UNKNOWN
+  webgl_disabled_browser: UNKNOWN
+  external_participant_comprehension: MISSING
+  concept_lock_effect: NONE
+  naming_lock_effect: NONE
+  product_exploitation_loop: ACTIVE_CONDITIONAL_ON_LIVE_LEARNING
