@@ -1,7 +1,7 @@
 handover:
   date: 2026-10-08
   repository: Faadil1/Faadil1-day20-mechanism-lab
-  branch: design/v4-sediment-atlas-buried-path
+  branch: build/v4-buried-path-kill-test
   status: ACTIVE_PRE_CONCEPT_RECONCILED
   current_owner: pbpd
 
@@ -34,16 +34,16 @@ handover:
   exact_next_gate:
     id: D4_V4_BURIED_PATH__EXPERIENTIAL_KILL_TEST
     owner: pbpd
-    protocol: research/ROUND-1-TEST-PACKET.md
+    protocol: research/V4-EXPERIENTIAL-KILL-TEST-PACKET.md
     candidates:
       - A_RETROSPECTIVE_MISMATCH
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Implement and compare two bounded, real-use, browser-operable mechanism probes: excavatable
-      sedimentary terrain versus non-geological traceable route. Use the same deterministic model and
-      cultural artifact corpus, then test non-coached cause/consequence/unknown comprehension.
-      Preserve PR #6 as Draft; do not produce high-cost 3D until this gate survives.
+      Open the branch-specific Cloudflare preview for V4; verify both real interactive probe paths,
+      no-WebGL usability, keyboard, mobile, screenshots, recoverability and commit binding. Then conduct
+      the predeclared 4+4 initial uncoached comparative pilot; record both good and failed comprehension.
+      The coded paired probes exist and are CI green. Do not declare Concept Lock or merge Draft PR #8.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
@@ -75,3 +75,14 @@ handover:
     substack_source_packet: research/SUBSTACK-EDITORIAL-SOURCE-INTAKE-2026-10-08.md
     source_authority: NONE
     historical_V3_receipts_preserved: true
+
+  v4_implementation:
+    branch: build/v4-buried-path-kill-test
+    pr: 8
+    engine: src/v4/engine.ts
+    app: src/v4/ProbeApp.tsx
+    local_ci: PASS_15_TESTS_TYPECHECK_BUILD
+    runtime: PENDING
+    independent_blind_study: PENDING
+    evidence_graph: governance/V4-EVIDENCE-GRAPH.yaml
+    no_merge: true
