@@ -25,14 +25,16 @@ claims:
 
   - id: DAY20_V4_BROWSER_RUNTIME
     statement: Both V4 conditions complete the full journey in a real browser.
-    graph_status: MISSING
-    evidence_class: UNKNOWN
+    graph_status: PARTIAL
+    evidence_class: LIVE_STAGING_OPERATOR_VIDEO
     scenario: V4_BROWSER_FULL_LOOP_BOTH_CONDITIONS
-    runtime_execution: null
+    runtime_execution: OPERATOR_VIDEO_2026_10_08
     dependency: CLOUDFLARE_PAGES_PREVIEW
-    receipt: null
+    receipt: evidence/V4-OPERATOR-VIDEO-PARTIAL-LIVE-2026-10-08.md
     commit: null
-    deployment: null
+    deployment: https://963c5283.faadil1-day20-d4-preview.pages.dev/
+    observed: CONDITION_A_LOAD_ENTER_TRAVEL_DEEP_TIME_INDEX_ONE_DECISION_REV_01
+    note: Deployment to Git commit link, full loop and condition B remain unproven.
 
   - id: DAY20_V4_EXTERNAL_COMPREHENSION
     statement: Uncoached participants understand behavior to model consequence while recognizing intention is not known.
@@ -66,7 +68,7 @@ scenarios:
 
   - id: V4_BROWSER_FULL_LOOP_BOTH_CONDITIONS
     type: SUCCESS_NEGATIVE_RECOVERY
-    result: PENDING
+    result: PARTIAL_CONDITION_A_ONLY
     success: [first_route_to_deep_time, two_distinct_specimen_decisions, changed_path, return, reflection, replay, restore_or_keep, local_receipt]
     failure: [blocked_passage, disconnected_click_rejected, missing_clipboard_permission]
     accessibility: [keyboard, 390px_mobile, reduced_motion]
@@ -82,7 +84,8 @@ scenarios:
     protocol: research/V4-EXPERIENTIAL-KILL-TEST-PACKET.md
 
 unresolved_edges:
-  - V4_BROWSER_RUNTIME_has_no_verified_Cloudflare_deployment_or_telemetry
+  - V4_BROWSER_RUNTIME_partial_operator_video_only_without_full_loop_or_condition_B
+  - V4_DEPLOYMENT_HASH_VISIBLE_but_exact_commit_binding_not_verified
   - V4_EXTERNAL_COMPREHENSION_has_no_consented_user_trial
   - V4_NO_WEBGL_BROWSER_case_not_yet_observed
   - V4_CLOUDFLARE_COMMIT_BINDING_missing
