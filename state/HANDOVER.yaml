@@ -32,7 +32,7 @@ handover:
     - NO_REFERENCE_PROMOTION_BY_PRESENCE
 
   exact_next_gate:
-    id: D4_RUNTIME_FIDELITY_V2__LIVE_VISUAL_REVIEW
+    id: D4_V3_SPATIAL_EXPERIENCE_FOUNDATION_001
     owner: pbpd
     protocol: research/ROUND-1-TEST-PACKET.md
     candidates:
@@ -40,9 +40,9 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Open the live Cloudflare preview for design/d4-runtime-fidelity-v2 and compare it against the approved D4
-      visual source of truth. Human owner decides PASS or REVISE; specifically verify world scale, landmark silhouettes,
-      depth layers, visible causal reorganization, Deep Time return tension and mobile usability.
+      Build the Deep Time V3 foundation slice with real travel, mutable topology, one authored asset pipeline,
+      territory interior and snapshot-based causal replay. Do not scale to all territories until this slice passes
+      live visual and interaction review.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that

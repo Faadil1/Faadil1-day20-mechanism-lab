@@ -10,11 +10,11 @@ project:
   stage: PRE_CONCEPT
   lifecycle: QUALIFY_DECIDE
   current_owner: pbpd
-  exact_next_gate: D4_RUNTIME_FIDELITY_V2__LIVE_VISUAL_REVIEW
+  exact_next_gate: D4_V3_SPATIAL_EXPERIENCE_FOUNDATION_001
   exact_next_action: >-
-    Deploy or open the Cloudflare preview generated from design/d4-runtime-fidelity-v2 and perform human live visual
-    review against the approved D4 storyboard. Judge world scale, territory monumentality, spatial depth, reorganization
-    consequence, Deep Time tension, mobile usability and reveal fidelity. Do not merge before human approval.
+    Build the V3 load-bearing spatial foundation slice defined in design/D4-V3-SPATIAL-FOUNDATION-BLUEPRINT.md:
+    CENTRAL THRESHOLD → real travel → one bridge → DEEP TIME exterior/interior → behavior observation → mutable route
+    topology → changed return path → true snapshot-based causal replay. Prove this slice before scaling to all territories.
   concept_lock: BLOCKED
   naming_lock: BLOCKED
   terminal_completeness_allowed: false
@@ -259,4 +259,19 @@ d4_runtime_fidelity_v2:
   display_mutation_gain: 5.2
   truth_boundary: DISPLAY_AMPLIFICATION_IS_NOT_CANONICAL_DISTANCE
   human_live_visual_review: PENDING
+  concept_lock_effect: NONE
+
+d4_runtime_fidelity_v2_review:
+  runtime: https://f1925470.faadil1-day20-d4-preview.pages.dev/
+  status: REVISE
+  human_signal: MANY_MATERIAL_LAYERS_MISSING
+  conclusion: STRUCTURAL_EXPERIENCE_GAPS_NOT_POLISH_GAPS
+  receipt: design/D4-V3-EXPERIENCE-ARCHITECTURE-GAP-AUDIT.md
+
+d4_v3:
+  status: ACTIVE
+  branch: design/d4-experience-architecture-v3
+  gate: D4_V3_SPATIAL_EXPERIENCE_FOUNDATION_001
+  product_exploitation_loop: ACTIVE
+  scale_strategy: PROVE_ONE_LOAD_BEARING_DEEP_TIME_SLICE_THEN_EXPAND
   concept_lock_effect: NONE
