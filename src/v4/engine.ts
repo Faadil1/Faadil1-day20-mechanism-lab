@@ -80,7 +80,7 @@ const alternateFor = (id: NodeId): EdgeId => id === 'arcade' ? 'g-d' : id === 'g
 
 export const newJourney = (probe: Probe): Journey => ({
   probe, stage: 'entry', current: 'threshold', visited: ['threshold'],
-  firstRoute: [], traveled: [], choices: [], receipts: [],
+  firstRoute: [], traveled: [], choices: {}, receipts: [],
   world: { revision: 0, edges: byId(EDGES.map(e => ({ ...e }))) },
   revealedIndex: 0, finalChoice: null,
 })
