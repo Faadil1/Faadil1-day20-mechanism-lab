@@ -162,7 +162,7 @@ export default function App() {
                 {available.map(edge => <button key={edge.id} type="button" onClick={() => go(edge.id)} disabled={!edge.available} className="v4-route-button">
                   <span>{edge.available ? '↗' : '×'}</span>
                   <strong>{nodeLookup[neighbor(edge,journey.current)].name}</strong>
-                  <small>{edge.available ? 'Cross passage' : 'Covered'}</small>
+                  <small>{edge.available ? 'Route cost ' + edge.cost.toFixed(2) : 'Covered'}</small>
                 </button>)}
               </div>
               {phase === 'explore' && artifact && !hasChoice && (
