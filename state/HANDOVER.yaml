@@ -40,10 +40,11 @@ handover:
       - B_WHO_MOVED_THE_WORLD
       - C_UNRETRACEABLE_CAUSE
     action: >-
-      Open the branch-specific Cloudflare preview for V4; verify both real interactive probe paths,
-      no-WebGL usability, keyboard, mobile, screenshots, recoverability and commit binding. Then conduct
-      the predeclared 4+4 initial uncoached comparative pilot; record both good and failed comprehension.
-      The coded paired probes exist and are CI green. Do not declare Concept Lock or merge Draft PR #8.
+      Video evidence confirms only V4 condition A loads, reaches Deep Time, opens The Index and
+      applies a first logged specimen choice (REV 01). Complete A through changed return, reflection,
+      snapshot reveal and RESTORE/KEEP; run B with ?probe=route, then mobile, keyboard, no-WebGL,
+      negative/recovery and exact Cloudflare commit binding. After both complete browser loops,
+      run the predeclared independent pilot. No merge or Concept Lock.
     kill_condition: NEEDS_EXPLANATORY_COPY_TO_COMMUNICATE_CAUSAL_AMBIGUITY
     promotion_condition: >-
       Multiple independent participants identify behavior_to_inference_to_consequence and understand that
@@ -86,3 +87,13 @@ handover:
     independent_blind_study: PENDING
     evidence_graph: governance/V4-EVIDENCE-GRAPH.yaml
     no_merge: true
+
+  v4_operator_video_review:
+    observed_on: 2026-10-08
+    deployment_url: https://963c5283.faadil1-day20-d4-preview.pages.dev/
+    status: PARTIAL
+    source: evidence/V4-OPERATOR-VIDEO-PARTIAL-LIVE-2026-10-08.md
+    first_causal_mutation: OBSERVED
+    second_choice_return_reveal_recovery: UNKNOWN
+    condition_B: UNKNOWN
+    exact_deployed_commit: UNKNOWN
