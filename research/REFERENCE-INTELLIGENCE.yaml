@@ -56,6 +56,89 @@ patterns:
     preserved_constraints:
       - friction_and_traceability_alone_are_not_novel_enough_for_Day20
 
+  - reference_id: DAY20_RI_004
+    title: The Orbit — creative culture design oddities and internet ephemera
+    source_url: https://www.itstheorbit.com/
+    requested_context: user_supplied_Substack_screenshot_for_Day20_cultural_content_discovery
+    pipeline_status: CLASSIFIED
+    trigger_domains: [internet_history, cultural_artifacts, creative_culture, editorial_research]
+    primary_verification_required: true
+    primary_verification_status: VERIFIED_PUBLICATION_IDENTITY_ONLY
+    last_checked: 2026-10-08
+    authority: NONE
+    adoption_status: PROJECT_LOCAL_SOURCE_DISCOVERY_NOT_PRODUCT_EVIDENCE
+    preserved_constraints:
+      - author_and_publication_are_editorial_sources_not_peer_reviewed_research
+      - individual_articles_and_artifact_claims_require_per_item_verification
+      - do_not_assume_nostalgic_idealizations_are_facts
+      - do_not_copy_article_text_visuals_or_animation_assets_without_rights
+
+  - reference_id: DAY20_RI_005
+    title: Ten Old Internet Animations that Define Millennials
+    source_url: https://www.itstheorbit.com/
+    requested_context: user_screenshot_of_The_Orbit_article_and_potential_artifact_inventory
+    pipeline_status: INBOX
+    trigger_domains: [early_web_animation, web_culture, interpersonal_sharing, content_authorship]
+    primary_verification_required: true
+    primary_verification_status: TITLE_AND_PUBLICATION_VISIBLE_IN_USER_SCREENSHOT_EXACT_ARTICLE_URL_NOT_VERIFIED
+    last_checked: 2026-10-08
+    authority: NONE
+    adoption_status: NOT_ADOPTED_PENDING_ARTICLE_URL_CONTENT_AND_ARTIFACT_CHECK
+    preserved_constraints:
+      - screenshot_is_not_an_independently_retrieved_article
+      - creator_credit_visible_as_The_Orbit_and_Kris_Litson_in_user_screenshot
+      - do_not_infer_that_the_early_web_was_noncommercial_or_algorithm_free
+      - original_animation_rights_must_be_verified_before_reuse
+
+  - reference_id: DAY20_RI_006
+    title: How life was different during the early Internet — The Looking Glass
+    source_url: https://lg.substack.com/p/some-people-like-restoring-vintage
+    requested_context: firsthand_account_of_early_web_rituals_files_subscriptions_and_retrievable_traces
+    pipeline_status: RELEVANT
+    trigger_domains: [internet_history, content_design, personal_web, path_memory]
+    primary_verification_required: true
+    primary_verification_status: VERIFIED_AUTHOR_PUBLICATION_AND_ARTICLE_TEXT
+    last_checked: 2026-10-08
+    authority: NONE
+    adoption_status: PROJECT_LOCAL_EDITORIAL_INPUT_ONLY
+    preserved_constraints:
+      - autobiographical_experience_not_population_level_evidence
+      - historical_claims_need_independent_verification
+      - avoid_recreating_trademarked_UI_or_unlicensed_artifacts
+
+  - reference_id: DAY20_RI_007
+    title: Before the social feed — personal homepages and profile customization
+    source_url: https://adryancorcione.substack.com/p/personal-homepages-profile-customization-history-identity
+    requested_context: human-authored_navigation_profile_customization_identity_and_traces
+    pipeline_status: RELEVANT
+    trigger_domains: [internet_history, personal_web, user_authorship, historical_examples]
+    primary_verification_required: true
+    primary_verification_status: VERIFIED_AUTHOR_PUBLICATION_AND_ARTICLE_TEXT
+    last_checked: 2026-10-08
+    authority: NONE
+    adoption_status: PROJECT_LOCAL_EDITORIAL_INPUT_ONLY
+    preserved_constraints:
+      - first_person_recollection_not_representative_research
+      - distinguish_experienced_recollection_from_independently_confirmed_history
+      - do_not_copy_creative_assets_or_text_wholesale
+
+  - reference_id: DAY20_RI_008
+    title: Why we are nostalgic for the early web — New_Public
+    source_url: https://newpublic.substack.com/p/-why-were-nostalgic-for-the-early
+    requested_context: cultural_interpretation_of_early_web_craft_community_and_platform_mediation
+    pipeline_status: WATCH
+    trigger_domains: [internet_culture, nostalgia_countercase, creative_references]
+    primary_verification_required: true
+    primary_verification_status: VERIFIED_EDITORIAL_ARTICLE_EXISTENCE_AND_TEXT
+    last_checked: 2026-10-08
+    authority: NONE
+    adoption_status: NOT_ADOPTED_AS_CORE_HYPOTHESIS
+    preserved_constraints:
+      - nostalgia_is_a_point_of_view_not_a_factual_conclusion
+      - use_primary_historical_sources_for_material_claims
+      - do_not_let_editorial_nostalgia_replace_the_causal_mechanism
+
+
 routing:
   owner_for_decision: pbpd
   decision: USE_BOUNDED_PROJECT_REFERENCES_ONLY
