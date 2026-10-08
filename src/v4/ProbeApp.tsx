@@ -145,7 +145,7 @@ export default function App() {
       </section>
       <div className="v4-landscape">
         <Atlas world={visibleWorld} probe={journey.probe} current={journey.current} onGo={go} interactive={isNavigating}/>
-        {phase === 'entry' && <div className="v4-entry-overlay"><div className="v4-entry-content"><div className="v4-meta">AN ORIGINAL EXPERIMENT / NO WEBGL REQUIRED</div><h2>What changes when you follow a trail?</h2><p>Travel to an archive, discover fragments, and find your way back. No account. No data sent to a server.</p><button className="v4-primary" onClick={() => setJourney(startJourney)}>Begin journey <span aria-hidden="true">↗</span></button></div></div>}
+        {phase === 'entry' && <div className="v4-entry-overlay"><div className="v4-entry-content"><div className="v4-meta">AN ORIGINAL EXPERIMENT / NO WEBGL REQUIRED</div><h2>What changes when you follow a trail?</h2><p>Travel to an archive, discover fragments, and find your way back. No account. Study responses are not uploaded.</p><button className="v4-primary" onClick={() => setJourney(startJourney)}>Begin journey <span aria-hidden="true">↗</span></button></div></div>}
       </div>
 
       <div className="v4-bottom">
